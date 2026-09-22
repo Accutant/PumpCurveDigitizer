@@ -1,0 +1,193 @@
+{
+  "image": "sheet.png",
+  "frame": [
+    696,
+    162,
+    1564,
+    638
+  ],
+  "exclude_boxes": [
+    [
+      710,
+      205,
+      820,
+      245
+    ],
+    [
+      790,
+      335,
+      910,
+      375
+    ],
+    [
+      840,
+      440,
+      940,
+      480
+    ],
+    [
+      895,
+      150,
+      1050,
+      180
+    ],
+    [
+      720,
+      490,
+      755,
+      565
+    ],
+    [
+      1430,
+      160,
+      1565,
+      260
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        696.12,
+        0.0
+      ],
+      [
+        840.0,
+        250.0
+      ],
+      [
+        985.0,
+        500.0
+      ],
+      [
+        1130.0,
+        750.0
+      ],
+      [
+        1274.5,
+        1000.0
+      ],
+      [
+        1420.0,
+        1250.0
+      ],
+      [
+        1568.5,
+        1500.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          639.88,
+          0.0
+        ],
+        [
+          533.75,
+          10.0
+        ],
+        [
+          428.38,
+          20.0
+        ],
+        [
+          322.25,
+          30.0
+        ],
+        [
+          216.12,
+          40.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R3",
+      "ticks": [
+        [
+          639.88,
+          0.0
+        ],
+        [
+          521.0,
+          0.2
+        ],
+        [
+          401.5,
+          0.4
+        ],
+        [
+          282.88,
+          0.6
+        ],
+        [
+          163.0,
+          0.8
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "R4",
+      "ticks": [
+        [
+          639.88,
+          0.0
+        ],
+        [
+          503.62,
+          20.0
+        ],
+        [
+          367.38,
+          40.0
+        ],
+        [
+          231.12,
+          60.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#495ea9",
+      "tol": 40,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#dd2731",
+      "tol": 40,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#158548",
+      "tol": 40,
+      "style": "solid"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "model": "400FLEXPump7",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "ror_min_bpd": 50,
+    "ror_max_bpd": 925,
+    "pump_od_in": 4.0,
+    "housing_burst_psi": 5627,
+    "bep_bpd": 725,
+    "series": "400",
+    "stage_type": "Mixed-flow",
+    "notes": "Standard shaft alloy Inconel, shaft dia 0.6875 in. Housing alloys Carbon steel and 9Cr-1Mo. Alternate ER (extended range) variant digitized separately as FLEXPumpER7 (400 FlexER7 sheet), flow range 50-1200 bbl/d."
+  }
+}

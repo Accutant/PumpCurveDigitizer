@@ -1,0 +1,275 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/SLB\\SLB-030.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 10.5,
+  "dpi": 200,
+  "size": [
+    978,
+    672
+  ],
+  "frame": [
+    74,
+    188,
+    853,
+    507
+  ],
+  "axes": [
+    {
+      "a": 118.28096605125229,
+      "b": -0.20740604177091823,
+      "ticks": [
+        {
+          "value": 10.0,
+          "px": 522.0
+        },
+        {
+          "value": 20.0,
+          "px": 474.0
+        },
+        {
+          "value": 30.0,
+          "px": 426.0
+        },
+        {
+          "value": 40.0,
+          "px": 377.0
+        },
+        {
+          "value": 50.0,
+          "px": 329.0
+        },
+        {
+          "value": 60.0,
+          "px": 281.0
+        },
+        {
+          "value": 70.0,
+          "px": 233.0
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.42857142857150166,
+      "value_range": [
+        10.0,
+        70.0
+      ],
+      "pos": 62.5,
+      "side": "left",
+      "orient": "v",
+      "snapped": 0,
+      "id": "L0"
+    },
+    {
+      "a": 11.82809660512523,
+      "b": -0.020740604177091834,
+      "ticks": [
+        {
+          "value": 1.0,
+          "px": 522.0
+        },
+        {
+          "value": 2.0,
+          "px": 474.0
+        },
+        {
+          "value": 3.0,
+          "px": 426.0
+        },
+        {
+          "value": 4.0,
+          "px": 377.0
+        },
+        {
+          "value": 5.0,
+          "px": 329.0
+        },
+        {
+          "value": 6.0,
+          "px": 281.0
+        },
+        {
+          "value": 7.0,
+          "px": 233.0
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.4285714285713311,
+      "value_range": [
+        1.0,
+        7.0
+      ],
+      "pos": 870.125,
+      "side": "right",
+      "orient": "v",
+      "snapped": 0,
+      "id": "R1"
+    },
+    {
+      "a": 118.3424418749908,
+      "b": -0.20748384517764054,
+      "ticks": [
+        {
+          "value": 10.0,
+          "px": 522.0
+        },
+        {
+          "value": 20.0,
+          "px": 474.0
+        },
+        {
+          "value": 30.0,
+          "px": 426.0
+        },
+        {
+          "value": 50.0,
+          "px": 329.5
+        },
+        {
+          "value": 60.0,
+          "px": 281.0
+        },
+        {
+          "value": 70.0,
+          "px": 233.0
+        }
+      ],
+      "rejected": [
+        "4",
+        "94"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.22014326293674458,
+      "value_range": [
+        10.0,
+        70.0
+      ],
+      "pos": 949.75,
+      "side": "right",
+      "orient": "v",
+      "snapped": 0,
+      "id": "R2"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#ed2225",
+      "rgb": [
+        237,
+        34,
+        37
+      ],
+      "pixels": 1135
+    },
+    {
+      "kind": "color",
+      "hex": "#024483",
+      "rgb": [
+        2,
+        68,
+        131
+      ],
+      "pixels": 976
+    },
+    {
+      "kind": "color",
+      "hex": "#ed896c",
+      "rgb": [
+        237,
+        137,
+        108
+      ],
+      "pixels": 724
+    },
+    {
+      "kind": "color",
+      "hex": "#ffef97",
+      "rgb": [
+        255,
+        239,
+        151
+      ],
+      "pixels": 599
+    },
+    {
+      "kind": "dark",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "pixels": 569
+    },
+    {
+      "kind": "color",
+      "hex": "#487aa1",
+      "rgb": [
+        72,
+        122,
+        161
+      ],
+      "pixels": 524
+    },
+    {
+      "kind": "color",
+      "hex": "#565033",
+      "rgb": [
+        86,
+        80,
+        51
+      ],
+      "pixels": 517
+    }
+  ],
+  "labels": [
+    {
+      "text": "Efficiency",
+      "box": [
+        328,
+        284,
+        382,
+        319
+      ]
+    },
+    {
+      "text": "Operating",
+      "box": [
+        570,
+        301,
+        626,
+        323
+      ]
+    },
+    {
+      "text": "range",
+      "box": [
+        621,
+        304,
+        658,
+        323
+      ]
+    },
+    {
+      "text": "Head",
+      "box": [
+        191,
+        309,
+        224,
+        336
+      ]
+    },
+    {
+      "text": "Power",
+      "box": [
+        289,
+        462,
+        327,
+        480
+      ]
+    }
+  ]
+}

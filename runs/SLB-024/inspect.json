@@ -1,0 +1,357 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/SLB\\SLB-024.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 10.5,
+  "dpi": 200,
+  "size": [
+    967,
+    675
+  ],
+  "frame": [
+    77,
+    204,
+    840,
+    584
+  ],
+  "axes": [
+    {
+      "a": -1275.2406246439834,
+      "b": 16.391883734929706,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 77.75
+        },
+        {
+          "value": 2500.0,
+          "px": 230.0
+        },
+        {
+          "value": 5000.0,
+          "px": 383.375
+        },
+        {
+          "value": 7500.0,
+          "px": 535.125
+        },
+        {
+          "value": 10000.0,
+          "px": 688.125
+        },
+        {
+          "value": 12500.0,
+          "px": 840.125
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.548918134132407,
+      "value_range": [
+        0.0,
+        12500.0
+      ],
+      "pos": 595.625,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 0,
+      "id": "B0"
+    },
+    {
+      "a": 291.75000000000006,
+      "b": -0.5000000000000002,
+      "ticks": [
+        {
+          "value": 25.0,
+          "px": 533.5,
+          "ocr_px": 529.0
+        },
+        {
+          "value": 50.0,
+          "px": 483.5,
+          "ocr_px": 479.125
+        },
+        {
+          "value": 75.0,
+          "px": 433.5,
+          "ocr_px": 429.125
+        },
+        {
+          "value": 100.0,
+          "px": 383.5,
+          "ocr_px": 379.125
+        },
+        {
+          "value": 125.0,
+          "px": 333.5,
+          "ocr_px": 329.125
+        },
+        {
+          "value": 150.0,
+          "px": 283.5,
+          "ocr_px": 279.125
+        },
+        {
+          "value": 175.0,
+          "px": 233.5,
+          "ocr_px": 229.125
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 1.1368683772161603e-13,
+      "value_range": [
+        25.0,
+        175.0
+      ],
+      "pos": 62.625,
+      "side": "left",
+      "orient": "v",
+      "snapped": 7,
+      "snap_offset_px": 4.375,
+      "id": "L1"
+    },
+    {
+      "a": 58.34999999999999,
+      "b": -0.1,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 583.5,
+          "ocr_px": 579.125
+        },
+        {
+          "value": 5.0,
+          "px": 533.5,
+          "ocr_px": 529.0
+        },
+        {
+          "value": 10.0,
+          "px": 483.5,
+          "ocr_px": 479.0
+        },
+        {
+          "value": 15.0,
+          "px": 433.5,
+          "ocr_px": 429.0
+        },
+        {
+          "value": 20.0,
+          "px": 383.5,
+          "ocr_px": 379.0
+        },
+        {
+          "value": 25.0,
+          "px": 333.5,
+          "ocr_px": 329.0
+        },
+        {
+          "value": 30.0,
+          "px": 283.5,
+          "ocr_px": 279.0
+        },
+        {
+          "value": 35.0,
+          "px": 233.5,
+          "ocr_px": 229.0
+        }
+      ],
+      "rejected": [
+        "12,500",
+        "0"
+      ],
+      "repaired": [],
+      "max_resid_px": 1.7053025658242404e-13,
+      "value_range": [
+        0.0,
+        35.0
+      ],
+      "pos": 852.4375,
+      "side": "right",
+      "orient": "v",
+      "snapped": 8,
+      "snap_offset_px": 4.5,
+      "id": "R2"
+    },
+    {
+      "a": 116.69999999999997,
+      "b": -0.2,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 583.5,
+          "ocr_px": 579.25
+        },
+        {
+          "value": 10.0,
+          "px": 533.5,
+          "ocr_px": 529.0
+        },
+        {
+          "value": 20.0,
+          "px": 483.5,
+          "ocr_px": 479.0
+        },
+        {
+          "value": 30.0,
+          "px": 433.5,
+          "ocr_px": 429.0
+        },
+        {
+          "value": 40.0,
+          "px": 383.5,
+          "ocr_px": 379.0
+        },
+        {
+          "value": 50.0,
+          "px": 333.5,
+          "ocr_px": 329.0
+        },
+        {
+          "value": 60.0,
+          "px": 283.5,
+          "ocr_px": 279.0
+        },
+        {
+          "value": 70.0,
+          "px": 233.5,
+          "ocr_px": 229.0
+        }
+      ],
+      "rejected": [
+        "2"
+      ],
+      "repaired": [],
+      "max_resid_px": 1.7053025658242404e-13,
+      "value_range": [
+        0.0,
+        70.0
+      ],
+      "pos": 935.25,
+      "side": "right",
+      "orient": "v",
+      "snapped": 8,
+      "snap_offset_px": 4.5,
+      "id": "R3"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#ed2126",
+      "rgb": [
+        237,
+        33,
+        38
+      ],
+      "pixels": 1005
+    },
+    {
+      "kind": "color",
+      "hex": "#044483",
+      "rgb": [
+        4,
+        68,
+        131
+      ],
+      "pixels": 950
+    },
+    {
+      "kind": "dark",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "pixels": 753
+    },
+    {
+      "kind": "color",
+      "hex": "#f38267",
+      "rgb": [
+        243,
+        130,
+        103
+      ],
+      "pixels": 661
+    },
+    {
+      "kind": "color",
+      "hex": "#497ba1",
+      "rgb": [
+        73,
+        123,
+        161
+      ],
+      "pixels": 513
+    },
+    {
+      "kind": "color",
+      "hex": "#f9dd8b",
+      "rgb": [
+        249,
+        221,
+        139
+      ],
+      "pixels": 450
+    },
+    {
+      "kind": "color",
+      "hex": "#664229",
+      "rgb": [
+        102,
+        66,
+        41
+      ],
+      "pixels": 198
+    }
+  ],
+  "labels": [
+    {
+      "text": "Efficiency",
+      "box": [
+        237,
+        265,
+        291,
+        286
+      ]
+    },
+    {
+      "text": "Operating",
+      "box": [
+        446,
+        300,
+        501,
+        322
+      ]
+    },
+    {
+      "text": "range",
+      "box": [
+        496,
+        303,
+        532,
+        322
+      ]
+    },
+    {
+      "text": "Head",
+      "box": [
+        120,
+        345,
+        152,
+        363
+      ]
+    },
+    {
+      "text": "Power",
+      "box": [
+        210,
+        522,
+        247,
+        540
+      ]
+    }
+  ]
+}

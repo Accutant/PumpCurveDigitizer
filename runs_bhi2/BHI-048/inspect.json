@@ -1,0 +1,323 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/BHI\\BHI-048.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 7.5,
+  "dpi": 200,
+  "size": [
+    962,
+    706
+  ],
+  "frame": [
+    165,
+    124,
+    805,
+    579
+  ],
+  "axes": [
+    {
+      "a": -3778.559157506595,
+      "b": 22.109864938475077,
+      "ticks": [
+        {
+          "value": 2000.0,
+          "px": 261.5,
+          "ocr_px": 260.375
+        },
+        {
+          "value": 4000.0,
+          "px": 351.5,
+          "ocr_px": 350.75
+        },
+        {
+          "value": 6000.0,
+          "px": 442.5,
+          "ocr_px": 440.875
+        },
+        {
+          "value": 8000.0,
+          "px": 532.5,
+          "ocr_px": 532.625
+        },
+        {
+          "value": 10000.0,
+          "px": 623.5,
+          "ocr_px": 623.375
+        },
+        {
+          "value": 12000.0,
+          "px": 713.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.31396083385993734,
+      "value_range": [
+        2000.0,
+        12000.0
+      ],
+      "pos": 585.75,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 5,
+      "snap_offset_px": 0.75,
+      "id": "B0"
+    },
+    {
+      "a": 63.920824160162745,
+      "b": -0.11150323649258784,
+      "ticks": [
+        {
+          "value": 5.0,
+          "px": 528.5,
+          "ocr_px": 528.5
+        },
+        {
+          "value": 10.0,
+          "px": 483.5,
+          "ocr_px": 482.5
+        },
+        {
+          "value": 15.0,
+          "px": 438.5,
+          "ocr_px": 437.5
+        },
+        {
+          "value": 20.0,
+          "px": 394.0,
+          "ocr_px": 393.5
+        },
+        {
+          "value": 25.0,
+          "px": 349.0,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 30.0,
+          "px": 304.5,
+          "ocr_px": 303.5
+        },
+        {
+          "value": 35.0,
+          "px": 259.5,
+          "ocr_px": 258.5
+        },
+        {
+          "value": 40.0,
+          "px": 214.5,
+          "ocr_px": 214.5
+        },
+        {
+          "value": 45.0,
+          "px": 169.5,
+          "ocr_px": 168.875
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.28619215759152894,
+      "value_range": [
+        5.0,
+        45.0
+      ],
+      "pos": 154.0,
+      "side": "left",
+      "orient": "v",
+      "snapped": 9,
+      "snap_offset_px": 0.625,
+      "id": "L1"
+    },
+    {
+      "a": 6.392082416016277,
+      "b": -0.011150323649258786,
+      "ticks": [
+        {
+          "value": 0.5,
+          "px": 528.5,
+          "ocr_px": 528.5
+        },
+        {
+          "value": 1.0,
+          "px": 483.5,
+          "ocr_px": 482.5
+        },
+        {
+          "value": 1.5,
+          "px": 438.5,
+          "ocr_px": 437.5
+        },
+        {
+          "value": 2.0,
+          "px": 394.0,
+          "ocr_px": 393.5
+        },
+        {
+          "value": 2.5,
+          "px": 349.0,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 3.0,
+          "px": 304.5,
+          "ocr_px": 303.5
+        },
+        {
+          "value": 3.5,
+          "px": 259.5,
+          "ocr_px": 258.5
+        },
+        {
+          "value": 4.0,
+          "px": 214.5,
+          "ocr_px": 214.5
+        },
+        {
+          "value": 4.5,
+          "px": 169.5,
+          "ocr_px": 169.5
+        }
+      ],
+      "rejected": [
+        "60"
+      ],
+      "repaired": [
+        "25->2.5",
+        "45->4.5",
+        "15->1.5"
+      ],
+      "max_resid_px": 0.2861921575913584,
+      "value_range": [
+        0.5,
+        4.5
+      ],
+      "pos": 830.875,
+      "side": "right",
+      "orient": "v",
+      "snapped": 9,
+      "snap_offset_px": 0.5,
+      "id": "R2"
+    },
+    {
+      "a": 127.88430427903505,
+      "b": -0.22310714476187077,
+      "ticks": [
+        {
+          "value": 10.0,
+          "px": 528.5,
+          "ocr_px": 528.5
+        },
+        {
+          "value": 20.0,
+          "px": 483.5,
+          "ocr_px": 482.5
+        },
+        {
+          "value": 30.0,
+          "px": 438.5,
+          "ocr_px": 437.5
+        },
+        {
+          "value": 40.0,
+          "px": 394.0,
+          "ocr_px": 393.5
+        },
+        {
+          "value": 50.0,
+          "px": 349.0,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 60.0,
+          "px": 304.5,
+          "ocr_px": 303.5
+        },
+        {
+          "value": 70.0,
+          "px": 259.5,
+          "ocr_px": 258.5
+        },
+        {
+          "value": 80.0,
+          "px": 214.5,
+          "ocr_px": 214.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.23227091633498276,
+      "value_range": [
+        10.0,
+        80.0
+      ],
+      "pos": 862.0,
+      "side": "right",
+      "orient": "v",
+      "snapped": 8,
+      "snap_offset_px": 0.75,
+      "id": "R3"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#0e8411",
+      "rgb": [
+        14,
+        132,
+        17
+      ],
+      "pixels": 1629
+    },
+    {
+      "kind": "color",
+      "hex": "#0809fd",
+      "rgb": [
+        8,
+        9,
+        253
+      ],
+      "pixels": 1213
+    },
+    {
+      "kind": "color",
+      "hex": "#ff0101",
+      "rgb": [
+        255,
+        1,
+        1
+      ],
+      "pixels": 841
+    },
+    {
+      "kind": "color",
+      "hex": "#606ee8",
+      "rgb": [
+        96,
+        110,
+        232
+      ],
+      "pixels": 535
+    },
+    {
+      "kind": "color",
+      "hex": "#e7ed42",
+      "rgb": [
+        231,
+        237,
+        66
+      ],
+      "pixels": 504
+    },
+    {
+      "kind": "color",
+      "hex": "#d86061",
+      "rgb": [
+        216,
+        96,
+        97
+      ],
+      "pixels": 489
+    }
+  ],
+  "labels": []
+}

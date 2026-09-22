@@ -1,0 +1,208 @@
+{
+  "image": "sheet.png",
+  "frame": [
+    77,
+    179,
+    766,
+    585
+  ],
+  "exclude_boxes": [
+    [
+      344,
+      213,
+      400,
+      237
+    ],
+    [
+      121,
+      309,
+      154,
+      327
+    ],
+    [
+      377,
+      424,
+      433,
+      446
+    ],
+    [
+      429,
+      427,
+      465,
+      446
+    ],
+    [
+      533,
+      498,
+      572,
+      517
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        77.25,
+        0.0
+      ],
+      [
+        160.25,
+        250.0
+      ],
+      [
+        246.62,
+        500.0
+      ],
+      [
+        332.38,
+        750.0
+      ],
+      [
+        416.88,
+        1000.0
+      ],
+      [
+        502.88,
+        1250.0
+      ],
+      [
+        589.12,
+        1500.0
+      ],
+      [
+        675.12,
+        1750.0
+      ],
+      [
+        760.62,
+        2000.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          521.12,
+          10.0
+        ],
+        [
+          463.0,
+          20.0
+        ],
+        [
+          405.12,
+          30.0
+        ],
+        [
+          347.12,
+          40.0
+        ],
+        [
+          289.12,
+          50.0
+        ],
+        [
+          231.12,
+          60.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "unit": "hp",
+      "ticks": [
+        [
+          229.0,
+          3.0
+        ],
+        [
+          287.0,
+          2.5
+        ],
+        [
+          346.0,
+          2.0
+        ],
+        [
+          403.0,
+          1.5
+        ],
+        [
+          461.0,
+          1.0
+        ],
+        [
+          519.0,
+          0.5
+        ]
+      ]
+    },
+    "eff": {
+      "unit": "%",
+      "ticks": [
+        [
+          228.0,
+          60.0
+        ],
+        [
+          286.0,
+          50.0
+        ],
+        [
+          345.0,
+          40.0
+        ],
+        [
+          401.0,
+          30.0
+        ],
+        [
+          460.0,
+          20.0
+        ],
+        [
+          520.0,
+          10.0
+        ]
+      ]
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0b4783",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ed2c2d",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#000000",
+      "tol": 40,
+      "style": "solid"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "REDA",
+    "catalog_source": "REDA ESP systems",
+    "model": "D1150N",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "pump_od_in": 4.0,
+    "ror_min_bpd": 400,
+    "ror_max_bpd": 1650,
+    "shaft_limit_hp": 154,
+    "housing_burst_psi": 6000,
+    "notes": "400 Series, 1 stage basis, sg 1.00. BEP marked on sheet: Q=1102 bbl/d, H=36.87 ft, P=0.49 hp, E=61.03%. Housing burst: Buttress 6,000 psi used (Standard 5,000 psi, Welded 6,000 psi). High-strength shaft option 200 hp not used. Power/eff axis auto-detection failed (small far-right column, OCR missed it); ticks read manually from a zoomed crop. The printed Power(hp)/Efficiency(%) tick labels increase top-to-bottom (opposite of the Head axis and every other sheet in this batch) -- taken at face value this puts efficiency near the printed BEP flow at only ~11%, contradicting the sheets own BEP box (E=61.03%). Ticks were calibrated with values REVERSED (high value at top, matching Head) which reproduces the BEP box closely (fit: Q=1115, H matches, P=0.42 hp, E=59.4% vs printed 0.49 hp/61.03%); residual hydraulic-check diff up to 11.7 pts remains, likely from +-1-2px manual tick placement on a very short axis span. Recommend spot-checking this one row against the source PDF if precision matters.",
+    "bep_bpd": 1102
+  }
+}

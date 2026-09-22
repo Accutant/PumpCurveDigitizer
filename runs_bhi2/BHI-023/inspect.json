@@ -1,0 +1,297 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/BHI\\BHI-023.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 7.5,
+  "dpi": 200,
+  "size": [
+    962,
+    706
+  ],
+  "frame": [
+    155,
+    124,
+    805,
+    579
+  ],
+  "axes": [
+    {
+      "a": -9441.462305703153,
+      "b": 55.269813304538076,
+      "ticks": [
+        {
+          "value": 5000.0,
+          "px": 261.5,
+          "ocr_px": 260.375
+        },
+        {
+          "value": 10000.0,
+          "px": 351.5,
+          "ocr_px": 351.5
+        },
+        {
+          "value": 20000.0,
+          "px": 532.5,
+          "ocr_px": 532.5
+        },
+        {
+          "value": 25000.0,
+          "px": 623.5,
+          "ocr_px": 622.375
+        },
+        {
+          "value": 30000.0,
+          "px": 713.5,
+          "ocr_px": 713.0
+        }
+      ],
+      "rejected": [
+        "1"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.34858611825188746,
+      "value_range": [
+        5000.0,
+        30000.0
+      ],
+      "pos": 586.5,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 5,
+      "snap_offset_px": 0.5,
+      "id": "B0"
+    },
+    {
+      "a": 230.08519992528844,
+      "b": -0.4011436617289983,
+      "ticks": [
+        {
+          "value": 40.0,
+          "px": 473.5,
+          "ocr_px": 473.5
+        },
+        {
+          "value": 80.0,
+          "px": 374.5,
+          "ocr_px": 373.5
+        },
+        {
+          "value": 100.0,
+          "px": 324.5,
+          "ocr_px": 323.5
+        },
+        {
+          "value": 120.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 140.0,
+          "px": 224.5,
+          "ocr_px": 223.5
+        },
+        {
+          "value": 160.0,
+          "px": 174.5,
+          "ocr_px": 173.5
+        }
+      ],
+      "rejected": [
+        "00",
+        "7"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.35816618911161413,
+      "value_range": [
+        40.0,
+        160.0
+      ],
+      "pos": 155.75,
+      "side": "left",
+      "orient": "v",
+      "snapped": 6,
+      "snap_offset_px": 1.0,
+      "id": "L1"
+    },
+    {
+      "a": 57.56791721900654,
+      "b": -0.10042979588812137,
+      "ticks": [
+        {
+          "value": 5.0,
+          "px": 523.5,
+          "ocr_px": 523.5
+        },
+        {
+          "value": 10.0,
+          "px": 473.5,
+          "ocr_px": 473.5
+        },
+        {
+          "value": 15.0,
+          "px": 423.5,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 20.0,
+          "px": 374.5,
+          "ocr_px": 373.5
+        },
+        {
+          "value": 25.0,
+          "px": 324.5,
+          "ocr_px": 323.5
+        },
+        {
+          "value": 30.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 35.0,
+          "px": 224.5,
+          "ocr_px": 223.5
+        }
+      ],
+      "rejected": [
+        "60"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.42857142857150166,
+      "value_range": [
+        5.0,
+        35.0
+      ],
+      "pos": 828.0,
+      "side": "right",
+      "orient": "v",
+      "snapped": 7,
+      "snap_offset_px": 1.0,
+      "id": "R2"
+    },
+    {
+      "a": 115.07490872466322,
+      "b": -0.20071581446376863,
+      "ticks": [
+        {
+          "value": 10.0,
+          "px": 523.5,
+          "ocr_px": 523.5
+        },
+        {
+          "value": 20.0,
+          "px": 473.5,
+          "ocr_px": 473.5
+        },
+        {
+          "value": 30.0,
+          "px": 423.5,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 40.0,
+          "px": 374.5,
+          "ocr_px": 373.5
+        },
+        {
+          "value": 50.0,
+          "px": 324.5,
+          "ocr_px": 323.5
+        },
+        {
+          "value": 60.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 70.0,
+          "px": 224.5,
+          "ocr_px": 223.5
+        },
+        {
+          "value": 80.0,
+          "px": 174.5,
+          "ocr_px": 173.5
+        }
+      ],
+      "rejected": [
+        "2"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.4641577060932036,
+      "value_range": [
+        10.0,
+        80.0
+      ],
+      "pos": 861.8125,
+      "side": "right",
+      "orient": "v",
+      "snapped": 8,
+      "snap_offset_px": 1.0,
+      "id": "R3"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#0c830d",
+      "rgb": [
+        12,
+        131,
+        13
+      ],
+      "pixels": 1992
+    },
+    {
+      "kind": "color",
+      "hex": "#ff251d",
+      "rgb": [
+        255,
+        37,
+        29
+      ],
+      "pixels": 1538
+    },
+    {
+      "kind": "color",
+      "hex": "#0606ff",
+      "rgb": [
+        6,
+        6,
+        255
+      ],
+      "pixels": 1279
+    },
+    {
+      "kind": "color",
+      "hex": "#6d81f6",
+      "rgb": [
+        109,
+        129,
+        246
+      ],
+      "pixels": 518
+    },
+    {
+      "kind": "color",
+      "hex": "#f4f71e",
+      "rgb": [
+        244,
+        247,
+        30
+      ],
+      "pixels": 484
+    },
+    {
+      "kind": "color",
+      "hex": "#272765",
+      "rgb": [
+        39,
+        39,
+        101
+      ],
+      "pixels": 276
+    }
+  ],
+  "labels": []
+}

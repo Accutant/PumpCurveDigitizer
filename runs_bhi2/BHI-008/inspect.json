@@ -1,0 +1,232 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/BHI\\BHI-008.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 7.5,
+  "dpi": 200,
+  "size": [
+    962,
+    706
+  ],
+  "frame": [
+    155,
+    124,
+    805,
+    579
+  ],
+  "axes": [
+    {
+      "a": -18882.924611406306,
+      "b": 110.53962660907615,
+      "ticks": [
+        {
+          "value": 10000.0,
+          "px": 261.5,
+          "ocr_px": 261.375
+        },
+        {
+          "value": 20000.0,
+          "px": 351.5,
+          "ocr_px": 351.25
+        },
+        {
+          "value": 40000.0,
+          "px": 532.5,
+          "ocr_px": 532.25
+        },
+        {
+          "value": 50000.0,
+          "px": 623.5,
+          "ocr_px": 622.375
+        },
+        {
+          "value": 60000.0,
+          "px": 713.5,
+          "ocr_px": 713.0
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.34858611825188746,
+      "value_range": [
+        10000.0,
+        60000.0
+      ],
+      "pos": 585.75,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 5,
+      "snap_offset_px": 0.25,
+      "id": "B0"
+    },
+    {
+      "a": 229.7999999999999,
+      "b": -0.4000000000000001,
+      "ticks": [
+        {
+          "value": 80.0,
+          "px": 374.5,
+          "ocr_px": 373.5
+        },
+        {
+          "value": 100.0,
+          "px": 324.5,
+          "ocr_px": 323.5
+        },
+        {
+          "value": 120.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 140.0,
+          "px": 224.5,
+          "ocr_px": 223.5
+        },
+        {
+          "value": 160.0,
+          "px": 174.5,
+          "ocr_px": 173.5
+        }
+      ],
+      "rejected": [
+        "2",
+        "0"
+      ],
+      "repaired": [],
+      "max_resid_px": 3.410605131648481e-13,
+      "value_range": [
+        80.0,
+        160.0
+      ],
+      "pos": 155.75,
+      "side": "left",
+      "orient": "v",
+      "snapped": 5,
+      "snap_offset_px": 1.0,
+      "id": "L1"
+    },
+    {
+      "a": 115.07490872466322,
+      "b": -0.20071581446376863,
+      "ticks": [
+        {
+          "value": 10.0,
+          "px": 523.5,
+          "ocr_px": 523.5
+        },
+        {
+          "value": 20.0,
+          "px": 473.5,
+          "ocr_px": 473.5
+        },
+        {
+          "value": 30.0,
+          "px": 423.5,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 40.0,
+          "px": 374.5,
+          "ocr_px": 373.5
+        },
+        {
+          "value": 50.0,
+          "px": 324.5,
+          "ocr_px": 323.5
+        },
+        {
+          "value": 60.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 70.0,
+          "px": 224.5,
+          "ocr_px": 223.5
+        },
+        {
+          "value": 80.0,
+          "px": 174.5,
+          "ocr_px": 173.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.4641577060932036,
+      "value_range": [
+        10.0,
+        80.0
+      ],
+      "pos": 861.75,
+      "side": "right",
+      "orient": "v",
+      "snapped": 8,
+      "snap_offset_px": 1.0,
+      "id": "R2"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#0b830b",
+      "rgb": [
+        11,
+        131,
+        11
+      ],
+      "pixels": 1962
+    },
+    {
+      "kind": "color",
+      "hex": "#ff221a",
+      "rgb": [
+        255,
+        34,
+        26
+      ],
+      "pixels": 1356
+    },
+    {
+      "kind": "color",
+      "hex": "#0708ff",
+      "rgb": [
+        7,
+        8,
+        255
+      ],
+      "pixels": 1231
+    },
+    {
+      "kind": "color",
+      "hex": "#d7e16f",
+      "rgb": [
+        215,
+        225,
+        111
+      ],
+      "pixels": 990
+    },
+    {
+      "kind": "color",
+      "hex": "#6b7cf9",
+      "rgb": [
+        107,
+        124,
+        249
+      ],
+      "pixels": 518
+    },
+    {
+      "kind": "color",
+      "hex": "#252765",
+      "rgb": [
+        37,
+        39,
+        101
+      ],
+      "pixels": 260
+    }
+  ],
+  "labels": []
+}

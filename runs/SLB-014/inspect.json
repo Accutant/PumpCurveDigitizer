@@ -1,0 +1,374 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/SLB\\SLB-014.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 10.5,
+  "dpi": 200,
+  "size": [
+    974,
+    692
+  ],
+  "frame": [
+    78,
+    200,
+    857,
+    615
+  ],
+  "axes": [
+    {
+      "a": -2528.922512333046,
+      "b": 32.15617855853688,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 78.5,
+          "ocr_px": 78.5
+        },
+        {
+          "value": 2500.0,
+          "px": 156.5,
+          "ocr_px": 156.875
+        },
+        {
+          "value": 5000.0,
+          "px": 234.5,
+          "ocr_px": 235.0
+        },
+        {
+          "value": 7500.0,
+          "px": 311.5,
+          "ocr_px": 312.5
+        },
+        {
+          "value": 10000.0,
+          "px": 389.5,
+          "ocr_px": 390.375
+        },
+        {
+          "value": 12500.0,
+          "px": 467.5,
+          "ocr_px": 468.125
+        },
+        {
+          "value": 15000.0,
+          "px": 545.5,
+          "ocr_px": 546.125
+        },
+        {
+          "value": 17500.0,
+          "px": 622.5,
+          "ocr_px": 623.875
+        },
+        {
+          "value": 20000.0,
+          "px": 700.5,
+          "ocr_px": 700.875
+        },
+        {
+          "value": 22500.0,
+          "px": 778.5,
+          "ocr_px": 778.625
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.3816651075773052,
+      "value_range": [
+        0.0,
+        22500.0
+      ],
+      "pos": 620.625,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 10,
+      "snap_offset_px": -0.5625,
+      "id": "B0"
+    },
+    {
+      "a": 298.2843137254901,
+      "b": -0.49019607843137253,
+      "ticks": [
+        {
+          "value": 25.0,
+          "px": 557.5,
+          "ocr_px": 553.0
+        },
+        {
+          "value": 50.0,
+          "px": 506.5,
+          "ocr_px": 502.0
+        },
+        {
+          "value": 75.0,
+          "px": 455.5,
+          "ocr_px": 451.0
+        },
+        {
+          "value": 100.0,
+          "px": 404.5,
+          "ocr_px": 400.0
+        },
+        {
+          "value": 125.0,
+          "px": 353.5,
+          "ocr_px": 349.0
+        },
+        {
+          "value": 150.0,
+          "px": 302.5,
+          "ocr_px": 298.0
+        },
+        {
+          "value": 175.0,
+          "px": 251.5,
+          "ocr_px": 247.0
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 1.7053025658242404e-13,
+      "value_range": [
+        25.0,
+        175.0
+      ],
+      "pos": 63.875,
+      "side": "left",
+      "orient": "v",
+      "snapped": 7,
+      "snap_offset_px": 4.5,
+      "id": "L1"
+    },
+    {
+      "a": 59.65686274509799,
+      "b": -0.09803921568627436,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 608.5,
+          "ocr_px": 604.0
+        },
+        {
+          "value": 5.0,
+          "px": 557.5,
+          "ocr_px": 553.125
+        },
+        {
+          "value": 10.0,
+          "px": 506.5,
+          "ocr_px": 502.0
+        },
+        {
+          "value": 15.0,
+          "px": 455.5,
+          "ocr_px": 451.0
+        },
+        {
+          "value": 20.0,
+          "px": 404.5,
+          "ocr_px": 400.0
+        },
+        {
+          "value": 25.0,
+          "px": 353.5,
+          "ocr_px": 349.0
+        },
+        {
+          "value": 30.0,
+          "px": 302.5,
+          "ocr_px": 298.0
+        },
+        {
+          "value": 35.0,
+          "px": 251.5,
+          "ocr_px": 247.0
+        }
+      ],
+      "rejected": [
+        "25,000",
+        "75,000"
+      ],
+      "repaired": [],
+      "max_resid_px": 4.547473508864641e-13,
+      "value_range": [
+        0.0,
+        35.0
+      ],
+      "pos": 869.625,
+      "side": "right",
+      "orient": "v",
+      "snapped": 8,
+      "snap_offset_px": 4.5,
+      "id": "R2"
+    },
+    {
+      "a": 119.31372549019598,
+      "b": -0.1960784313725487,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 608.5,
+          "ocr_px": 604.25
+        },
+        {
+          "value": 10.0,
+          "px": 557.5,
+          "ocr_px": 553.0
+        },
+        {
+          "value": 20.0,
+          "px": 506.5,
+          "ocr_px": 502.0
+        },
+        {
+          "value": 30.0,
+          "px": 455.5,
+          "ocr_px": 451.0
+        },
+        {
+          "value": 40.0,
+          "px": 404.5,
+          "ocr_px": 400.0
+        },
+        {
+          "value": 50.0,
+          "px": 353.5,
+          "ocr_px": 349.0
+        },
+        {
+          "value": 60.0,
+          "px": 302.5,
+          "ocr_px": 298.0
+        },
+        {
+          "value": 70.0,
+          "px": 251.5,
+          "ocr_px": 247.0
+        }
+      ],
+      "rejected": [
+        "9"
+      ],
+      "repaired": [],
+      "max_resid_px": 4.547473508864641e-13,
+      "value_range": [
+        0.0,
+        70.0
+      ],
+      "pos": 954.0,
+      "side": "right",
+      "orient": "v",
+      "snapped": 8,
+      "snap_offset_px": 4.5,
+      "id": "R3"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#ed2528",
+      "rgb": [
+        237,
+        37,
+        40
+      ],
+      "pixels": 1118
+    },
+    {
+      "kind": "color",
+      "hex": "#024483",
+      "rgb": [
+        2,
+        68,
+        131
+      ],
+      "pixels": 952
+    },
+    {
+      "kind": "color",
+      "hex": "#f3896c",
+      "rgb": [
+        243,
+        137,
+        108
+      ],
+      "pixels": 691
+    },
+    {
+      "kind": "color",
+      "hex": "#49789f",
+      "rgb": [
+        73,
+        120,
+        159
+      ],
+      "pixels": 516
+    },
+    {
+      "kind": "color",
+      "hex": "#ffef97",
+      "rgb": [
+        255,
+        239,
+        151
+      ],
+      "pixels": 449
+    },
+    {
+      "kind": "color",
+      "hex": "#6a4a2e",
+      "rgb": [
+        106,
+        74,
+        46
+      ],
+      "pixels": 242
+    }
+  ],
+  "labels": [
+    {
+      "text": "Efficiency",
+      "box": [
+        340,
+        266,
+        395,
+        289
+      ]
+    },
+    {
+      "text": "Operating",
+      "box": [
+        576,
+        320,
+        632,
+        342
+      ]
+    },
+    {
+      "text": "range",
+      "box": [
+        628,
+        323,
+        664,
+        342
+      ]
+    },
+    {
+      "text": "Head",
+      "box": [
+        132,
+        383,
+        165,
+        407
+      ]
+    },
+    {
+      "text": "Power",
+      "box": [
+        295,
+        481,
+        332,
+        499
+      ]
+    }
+  ]
+}

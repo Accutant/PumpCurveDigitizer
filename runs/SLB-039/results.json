@@ -1,0 +1,150 @@
+{
+  "config": "SLB-039/sheet.json",
+  "meta": {
+    "manufacturer": "REDA",
+    "catalog_source": "REDA ESP systems",
+    "model": "RC2500",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "pump_od_in": 4.0,
+    "ror_min_bpd": 1000,
+    "ror_max_bpd": 3200,
+    "housing_burst_psi": 6000,
+    "bep_bpd": 2526,
+    "notes": "REDA Continuum Unconventional Extended-Life EST Stage, 400 Series, 1 stage basis. Duplicate scan of the same RC2500 sheet as SLB-038 (same catalogue row). Standard shaft rated 0 hp (not offered); only High-strength shaft (240 hp) available -- shaft_limit_hp left blank. Housing burst: Buttress/Welded 6,000 psi (Standard 5,000 psi)."
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        30.34963710633108,
+        -0.0019454038778566945,
+        3.4631308631281546e-06,
+        -2.45837667257267e-09,
+        4.958023181830662e-13,
+        -4.074324041277849e-17
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "ft/stage"
+      },
+      "qa": {
+        "n_points": 463,
+        "x_min": 1.871857759041859,
+        "x_max": 3950.3846864689785,
+        "r2": 0.9999942141042043,
+        "rmse": 0.018022296880306498,
+        "max_abs_resid": 0.05955619063189488,
+        "rmse_pct_span": 0.043644810816608585,
+        "max_resid_pct_span": 0.14422793555949473,
+        "largest_gap_pct_range": 19.705882352941167,
+        "roundtrip_err_pct_span": 6.882919194001797e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.8304104884066769,
+          "4": 0.3599243836695389,
+          "5": 0.14422793555949473,
+          "6": 0.13801854050309836,
+          "7": 0.1298232134382761,
+          "8": 0.12934933627067052,
+          "9": 0.12173260211870802
+        },
+        "flags": [
+          "gap of 20% of flow range in extracted points"
+        ]
+      }
+    },
+    "power": {
+      "coeffs": [
+        0.15809911591797515,
+        0.00026029720682109724,
+        2.6208812801163618e-08,
+        -3.2459440182998314e-11,
+        3.999881473700351e-15,
+        7.500737335167668e-20
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "hp/stage"
+      },
+      "qa": {
+        "n_points": 639,
+        "x_min": 199.29749919453866,
+        "x_max": 3991.0311420586395,
+        "r2": 0.9997635117281375,
+        "rmse": 0.0019798695163071403,
+        "max_abs_resid": 0.004970451823867572,
+        "rmse_pct_span": 0.04660243502872593,
+        "max_resid_pct_span": 0.1169951637102063,
+        "largest_gap_pct_range": 2.2970903522205206,
+        "roundtrip_err_pct_span": 1.0453031565230297e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.3813846240870001,
+          "4": 0.11851079267757128,
+          "5": 0.1169951637102089,
+          "6": 0.1188601611844067,
+          "7": 0.11367454932113363,
+          "8": 0.10391823342435448,
+          "9": 0.10586510802423889
+        },
+        "flags": []
+      }
+    },
+    "eff": {
+      "coeffs": [
+        0.20080983521211238,
+        0.08877209328661019,
+        -6.273385222247497e-05,
+        2.6623722100243595e-08,
+        -5.584843628087737e-12,
+        3.8986571203821113e-16
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "%"
+      },
+      "qa": {
+        "n_points": 588,
+        "x_min": 7.678494271850582,
+        "x_max": 3985.2245055458307,
+        "r2": 0.9996011459923652,
+        "rmse": 0.30962687929474847,
+        "max_abs_resid": 1.5797699255807134,
+        "rmse_pct_span": 0.3791449164462247,
+        "max_resid_pct_span": 1.9344629826804483,
+        "largest_gap_pct_range": 6.4233576642335795,
+        "roundtrip_err_pct_span": 3.0887669285100255e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 10.942209732195694,
+          "4": 3.665872273695283,
+          "5": 1.9344629826804478,
+          "6": 0.9224132583524935,
+          "7": 0.4741001170492047,
+          "8": 0.5731725064558736,
+          "9": 0.6469470717984847
+        },
+        "flags": []
+      }
+    }
+  },
+  "flags": [
+    "head: gap of 20% of flow range in extracted points",
+    "hydraulic check: Q*H/(135770*BHP) differs from digitized efficiency by up to 5.8 pts (axis assignment/units/SG?)",
+    "axis calibration residual > 3 px: check tick assignments"
+  ],
+  "calibration_resid_px": {
+    "x": 0.21948019828568954,
+    "head": 4.121147867408576e-13,
+    "power": 2.7941118654526886,
+    "eff": 3.1790499390987317
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 30.34963710633108,
+    "flow_max_bpd": 3950.3846864689785,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 2557.923048637063,
+    "bep_eff_pct": 65.99576443748722,
+    "bep_bhp_hp_per_stage": 0.6315986923038722,
+    "hydraulic_check_max_diff_pts": 5.816643543056827,
+    "hydraulic_check_mean_diff_pts": 4.89615746166159
+  },
+  "status": "review"
+}

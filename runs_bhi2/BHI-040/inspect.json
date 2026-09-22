@@ -1,0 +1,250 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/BHI\\BHI-040.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 7.5,
+  "dpi": 200,
+  "size": [
+    962,
+    706
+  ],
+  "frame": [
+    155,
+    124,
+    805,
+    579
+  ],
+  "axes": [
+    {
+      "a": -4301.004026422561,
+      "b": 25.236526431699264,
+      "ticks": [
+        {
+          "value": 2000.0,
+          "px": 249.5,
+          "ocr_px": 249.375
+        },
+        {
+          "value": 4000.0,
+          "px": 329.0,
+          "ocr_px": 328.75
+        },
+        {
+          "value": 6000.0,
+          "px": 408.5,
+          "ocr_px": 407.75
+        },
+        {
+          "value": 8000.0,
+          "px": 487.5,
+          "ocr_px": 487.375
+        },
+        {
+          "value": 10000.0,
+          "px": 566.5,
+          "ocr_px": 566.5
+        },
+        {
+          "value": 12000.0,
+          "px": 645.5,
+          "ocr_px": 646.5
+        },
+        {
+          "value": 14000.0,
+          "px": 725.5,
+          "ocr_px": 725.0
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.42898989248726593,
+      "value_range": [
+        2000.0,
+        14000.0
+      ],
+      "pos": 586.5,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 7,
+      "snap_offset_px": 0.125,
+      "id": "B0"
+    },
+    {
+      "a": 153.43623419663686,
+      "b": -0.2675831594451947,
+      "ticks": [
+        {
+          "value": 20.0,
+          "px": 498.5,
+          "ocr_px": 498.5
+        },
+        {
+          "value": 60.0,
+          "px": 349.5,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 80.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 100.0,
+          "px": 199.5,
+          "ocr_px": 198.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.31422018348615666,
+      "value_range": [
+        20.0,
+        100.0
+      ],
+      "pos": 158.125,
+      "side": "left",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 1.0,
+      "id": "L1"
+    },
+    {
+      "a": 38.45637583892614,
+      "b": -0.06711409395973143,
+      "ticks": [
+        {
+          "value": 5.0,
+          "px": 498.5,
+          "ocr_px": 498.5
+        },
+        {
+          "value": 10.0,
+          "px": 424.0,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 15.0,
+          "px": 349.5,
+          "ocr_px": 348.5
+        }
+      ],
+      "rejected": [
+        "60"
+      ],
+      "repaired": [],
+      "max_resid_px": 3.410605131648481e-13,
+      "value_range": [
+        5.0,
+        15.0
+      ],
+      "pos": 828.5,
+      "side": "right",
+      "orient": "v",
+      "snapped": 3,
+      "snap_offset_px": 0.5,
+      "id": "R2"
+    },
+    {
+      "a": 153.5831103315081,
+      "b": -0.2679162245884463,
+      "ticks": [
+        {
+          "value": 20.0,
+          "px": 498.5,
+          "ocr_px": 498.5
+        },
+        {
+          "value": 40.0,
+          "px": 424.0,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 60.0,
+          "px": 349.5,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 80.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.20010046885448673,
+      "value_range": [
+        20.0,
+        80.0
+      ],
+      "pos": 862.0,
+      "side": "right",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 0.75,
+      "id": "R3"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#0e840f",
+      "rgb": [
+        14,
+        132,
+        15
+      ],
+      "pixels": 1667
+    },
+    {
+      "kind": "color",
+      "hex": "#ff1b1a",
+      "rgb": [
+        255,
+        27,
+        26
+      ],
+      "pixels": 1387
+    },
+    {
+      "kind": "color",
+      "hex": "#0506ff",
+      "rgb": [
+        5,
+        6,
+        255
+      ],
+      "pixels": 1232
+    },
+    {
+      "kind": "color",
+      "hex": "#dedc77",
+      "rgb": [
+        222,
+        220,
+        119
+      ],
+      "pixels": 945
+    },
+    {
+      "kind": "color",
+      "hex": "#6e7df2",
+      "rgb": [
+        110,
+        125,
+        242
+      ],
+      "pixels": 509
+    },
+    {
+      "kind": "color",
+      "hex": "#362c61",
+      "rgb": [
+        54,
+        44,
+        97
+      ],
+      "pixels": 241
+    }
+  ],
+  "labels": []
+}

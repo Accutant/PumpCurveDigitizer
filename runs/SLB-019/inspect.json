@@ -1,0 +1,170 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/SLB\\SLB-019.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 10.5,
+  "dpi": 200,
+  "size": [
+    972,
+    667
+  ],
+  "frame": [
+    79,
+    379,
+    846,
+    540
+  ],
+  "axes": [
+    {
+      "a": 289.7499999999997,
+      "b": -0.49999999999999906,
+      "ticks": [
+        {
+          "value": 25.0,
+          "px": 529.5,
+          "ocr_px": 525.125
+        },
+        {
+          "value": 50.0,
+          "px": 479.5,
+          "ocr_px": 475.125
+        },
+        {
+          "value": 75.0,
+          "px": 429.5,
+          "ocr_px": 425.0
+        },
+        {
+          "value": 100.0,
+          "px": 379.5,
+          "ocr_px": 375.125
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 4.547473508864641e-13,
+      "value_range": [
+        25.0,
+        100.0
+      ],
+      "pos": 67.5625,
+      "side": "left",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 4.375,
+      "id": "L0"
+    },
+    {
+      "a": 115.89999999999989,
+      "b": -0.1999999999999997,
+      "ticks": [
+        {
+          "value": 10.0,
+          "px": 529.5,
+          "ocr_px": 525.125
+        },
+        {
+          "value": 20.0,
+          "px": 479.5,
+          "ocr_px": 475.125
+        },
+        {
+          "value": 30.0,
+          "px": 429.5,
+          "ocr_px": 425.0
+        },
+        {
+          "value": 40.0,
+          "px": 379.5,
+          "ocr_px": 375.125
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 2.2737367544323206e-13,
+      "value_range": [
+        10.0,
+        40.0
+      ],
+      "pos": 858.4375,
+      "side": "right",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 4.375,
+      "id": "R1"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#ed1d24",
+      "rgb": [
+        237,
+        29,
+        36
+      ],
+      "pixels": 752
+    },
+    {
+      "kind": "color",
+      "hex": "#f05c58",
+      "rgb": [
+        240,
+        92,
+        88
+      ],
+      "pixels": 408
+    },
+    {
+      "kind": "color",
+      "hex": "#004483",
+      "rgb": [
+        0,
+        68,
+        131
+      ],
+      "pixels": 368
+    },
+    {
+      "kind": "color",
+      "hex": "#f58e79",
+      "rgb": [
+        245,
+        142,
+        121
+      ],
+      "pixels": 298
+    },
+    {
+      "kind": "color",
+      "hex": "#447296",
+      "rgb": [
+        68,
+        114,
+        150
+      ],
+      "pixels": 176
+    },
+    {
+      "kind": "color",
+      "hex": "#ffef97",
+      "rgb": [
+        255,
+        239,
+        151
+      ],
+      "pixels": 90
+    }
+  ],
+  "labels": [
+    {
+      "text": "Power",
+      "box": [
+        255,
+        507,
+        293,
+        525
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/BHI\\BHI-004.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 7.5,
+  "dpi": 200,
+  "size": [
+    962,
+    706
+  ],
+  "frame": [
+    165,
+    124,
+    805,
+    587
+  ],
+  "axes": [
+    {
+      "a": -16183.866374840312,
+      "b": 94.74330546849785,
+      "ticks": [
+        {
+          "value": 5000.0,
+          "px": 223.5,
+          "ocr_px": 222.875
+        },
+        {
+          "value": 10000.0,
+          "px": 276.5,
+          "ocr_px": 276.625
+        },
+        {
+          "value": 15000.0,
+          "px": 329.5,
+          "ocr_px": 329.5
+        },
+        {
+          "value": 20000.0,
+          "px": 381.5,
+          "ocr_px": 382.0
+        },
+        {
+          "value": 25000.0,
+          "px": 434.5,
+          "ocr_px": 434.5
+        },
+        {
+          "value": 40000.0,
+          "px": 593.5,
+          "ocr_px": 592.875
+        },
+        {
+          "value": 45000.0,
+          "px": 645.5,
+          "ocr_px": 645.75
+        }
+      ],
+      "rejected": [
+        "3",
+        "25"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.4885349997477988,
+      "value_range": [
+        5000.0,
+        45000.0
+      ],
+      "pos": 586.5,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 7,
+      "snap_offset_px": 0.0,
+      "id": "B0"
+    },
+    {
+      "a": 383.6667491021703,
+      "b": -0.669340444291522,
+      "ticks": [
+        {
+          "value": 50.0,
+          "px": 498.5,
+          "ocr_px": 497.875
+        },
+        {
+          "value": 100.0,
+          "px": 423.5,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 150.0,
+          "px": 349.5,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 200.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 250.0,
+          "px": 199.5,
+          "ocr_px": 198.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.4000000000000341,
+      "value_range": [
+        50.0,
+        250.0
+      ],
+      "pos": 155.75,
+      "side": "left",
+      "orient": "v",
+      "snapped": 5,
+      "snap_offset_px": 1.0,
+      "id": "L1"
+    },
+    {
+      "a": 153.61855818299438,
+      "b": -0.26809458779558704,
+      "ticks": [
+        {
+          "value": 20.0,
+          "px": 498.5,
+          "ocr_px": 498.5
+        },
+        {
+          "value": 40.0,
+          "px": 423.5,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 60.0,
+          "px": 349.5,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 80.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        }
+      ],
+      "rejected": [
+        "60"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.30026809651474196,
+      "value_range": [
+        20.0,
+        80.0
+      ],
+      "pos": 828.0,
+      "side": "right",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 0.5,
+      "id": "R2"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#0d840d",
+      "rgb": [
+        13,
+        132,
+        13
+      ],
+      "pixels": 1698
+    },
+    {
+      "kind": "color",
+      "hex": "#ff2b1f",
+      "rgb": [
+        255,
+        43,
+        31
+      ],
+      "pixels": 1495
+    },
+    {
+      "kind": "color",
+      "hex": "#0909ff",
+      "rgb": [
+        9,
+        9,
+        255
+      ],
+      "pixels": 1232
+    },
+    {
+      "kind": "color",
+      "hex": "#f8f81d",
+      "rgb": [
+        248,
+        248,
+        29
+      ],
+      "pixels": 567
+    },
+    {
+      "kind": "color",
+      "hex": "#6d83ed",
+      "rgb": [
+        109,
+        131,
+        237
+      ],
+      "pixels": 557
+    },
+    {
+      "kind": "color",
+      "hex": "#282869",
+      "rgb": [
+        40,
+        40,
+        105
+      ],
+      "pixels": 381
+    }
+  ],
+  "labels": []
+}

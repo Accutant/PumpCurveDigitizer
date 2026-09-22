@@ -1,0 +1,221 @@
+{
+  "image": "sheet.png",
+  "frame": [
+    76,
+    176,
+    846,
+    578
+  ],
+  "exclude_boxes": [
+    [
+      303,
+      238,
+      358,
+      261
+    ],
+    [
+      494,
+      266,
+      550,
+      288
+    ],
+    [
+      545,
+      269,
+      581,
+      288
+    ],
+    [
+      175,
+      287,
+      207,
+      305
+    ],
+    [
+      247,
+      484,
+      284,
+      502
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        77.25,
+        0.0
+      ],
+      [
+        205.38,
+        5000.0
+      ],
+      [
+        334.0,
+        10000.0
+      ],
+      [
+        462.0,
+        15000.0
+      ],
+      [
+        589.75,
+        20000.0
+      ],
+      [
+        717.75,
+        25000.0
+      ],
+      [
+        845.88,
+        30000.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          528.5,
+          25.0
+        ],
+        [
+          478.0,
+          50.0
+        ],
+        [
+          427.5,
+          75.0
+        ],
+        [
+          377.5,
+          100.0
+        ],
+        [
+          326.5,
+          125.0
+        ],
+        [
+          276.5,
+          150.0
+        ],
+        [
+          226.5,
+          175.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "eff": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          578.5,
+          0.0
+        ],
+        [
+          528.5,
+          10.0
+        ],
+        [
+          473.0,
+          20.0
+        ],
+        [
+          427.5,
+          30.0
+        ],
+        [
+          377.5,
+          40.0
+        ],
+        [
+          326.5,
+          50.0
+        ],
+        [
+          276.5,
+          60.0
+        ],
+        [
+          226.5,
+          70.0
+        ]
+      ],
+      "unit": "%"
+    },
+    "power": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          578.5,
+          0.0
+        ],
+        [
+          528.5,
+          10.0
+        ],
+        [
+          473.0,
+          20.0
+        ],
+        [
+          427.5,
+          30.0
+        ],
+        [
+          377.5,
+          40.0
+        ],
+        [
+          326.5,
+          50.0
+        ],
+        [
+          276.5,
+          60.0
+        ],
+        [
+          226.5,
+          70.0
+        ]
+      ],
+      "unit": "hp"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0b4783",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ed2c2d",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#000000",
+      "tol": 40,
+      "style": "solid"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "REDA",
+    "catalog_source": "REDA ESP systems",
+    "model": "M520A",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "pump_od_in": 8.63,
+    "ror_min_bpd": 12000,
+    "ror_max_bpd": 20000,
+    "shaft_limit_hp": 637,
+    "housing_burst_psi": 2400,
+    "notes": "Housing burst Buttress/Welded rating 2,400 psi (consistent with M520B/M520C siblings). High-strength shaft option 1,019 hp not used. Power and efficiency axes share identical 0-70 numeric scale (hp and %) on this sheet; power ticks reused from the efficiency OCR column since gridlines coincide."
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "config": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/runs_bhi/400 FlexER7/sheet.json",
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "model": "400FLEXPumpER7",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "ror_min_bpd": 50,
+    "ror_max_bpd": 1200,
+    "pump_od_in": 4.0,
+    "housing_burst_psi": 5627,
+    "bep_bpd": 725,
+    "series": "400",
+    "stage_type": "Mixed-flow",
+    "notes": "Extended-range (ER) variant of FLEXPump7. Standard shaft alloy Inconel, shaft dia 0.6875 in. Housing alloys Carbon steel and 9Cr-1Mo."
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        36.91700805056045,
+        -0.006484057863656512,
+        2.7091766157114258e-05,
+        -6.355591649299304e-08,
+        4.224638694758411e-11,
+        -1.2659115658489809e-14
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "ft/stage"
+      },
+      "qa": {
+        "n_points": 765,
+        "x_min": 1.3874335202242492,
+        "x_max": 1295.1522456675582,
+        "r2": 0.9999910289979862,
+        "rmse": 0.023597239249058568,
+        "max_abs_resid": 0.12763593394587502,
+        "rmse_pct_span": 0.052509683439124384,
+        "max_resid_pct_span": 0.2840214660798625,
+        "largest_gap_pct_range": 0.3916449086161835,
+        "roundtrip_err_pct_span": 3.1622660372205025e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.4907562488496823,
+          "4": 0.41333648018420055,
+          "5": 0.2840214660798546,
+          "6": 0.28389561655389745,
+          "7": 0.2802477868552411,
+          "8": 0.2815157721459304,
+          "9": 0.2790852093949249
+        },
+        "flags": []
+      }
+    },
+    "power": {
+      "coeffs": [
+        0.21853200854533156,
+        5.206400005289068e-06,
+        3.4872321703024954e-08,
+        6.35516676075867e-10,
+        -8.502101597509554e-13,
+        3.0560424862829883e-16
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "hp/stage"
+      },
+      "qa": {
+        "n_points": 736,
+        "x_min": -0.3015544851900813,
+        "x_max": 1295.1522456675582,
+        "r2": 0.9999534629964602,
+        "rmse": 0.0003687890470622543,
+        "max_abs_resid": 0.0008824863978886821,
+        "rmse_pct_span": 0.046318093705143,
+        "max_resid_pct_span": 0.11083595892158389,
+        "largest_gap_pct_range": 3.650586701434158,
+        "roundtrip_err_pct_span": 3.4859640286113645e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 1.189117864208164,
+          "4": 0.5319847715685817,
+          "5": 0.11083595892157692,
+          "6": 0.11367178453535905,
+          "7": 0.11083859286041672,
+          "8": 0.11149104174013326,
+          "9": 0.11321338440640599
+        },
+        "flags": []
+      }
+    },
+    "eff": {
+      "coeffs": [
+        0.4738599500502474,
+        0.1213793449555702,
+        4.632082331432732e-05,
+        -3.120996977573219e-07,
+        2.928176947148786e-10,
+        -9.876879033580427e-14
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "%"
+      },
+      "qa": {
+        "n_points": 762,
+        "x_min": -0.3015544851900813,
+        "x_max": 1295.1522456675582,
+        "r2": 0.9999728819889359,
+        "rmse": 0.07755441161945646,
+        "max_abs_resid": 0.5602837793408781,
+        "rmse_pct_span": 0.11116504486871027,
+        "max_resid_pct_span": 0.8031003029879707,
+        "largest_gap_pct_range": 0.912646675358535,
+        "roundtrip_err_pct_span": 1.324022289490482e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 2.9454252775011067,
+          "4": 2.0787328562533687,
+          "5": 0.8031003029880217,
+          "6": 0.533716176110813,
+          "7": 0.3697767093056553,
+          "8": 0.36992089655434557,
+          "9": 0.3709312538708723
+        },
+        "flags": []
+      }
+    }
+  },
+  "flags": [],
+  "calibration_resid_px": {
+    "x": 0.42854151966939125,
+    "head": 1.2019498607243657,
+    "power": 0.15204750937655362,
+    "eff": 0.3718441308531513
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 36.91700805056045,
+    "flow_max_bpd": 1295.1522456675582,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 762.2636482053748,
+    "bep_eff_pct": 55.12050708193946,
+    "bep_bhp_hp_per_stage": 0.31584434173549714,
+    "hydraulic_check_max_diff_pts": 0.8396589356758923,
+    "hydraulic_check_mean_diff_pts": -0.7033883204704073
+  },
+  "status": "ok"
+}

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "model": "538P75",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "notes": "Head, Power and Efficiency curves for this pump share the same olive colour on this 3-pump chart, and this pump's curves extend across the full width of the chart. Digitized with a custom column-wise velocity-tracked tracer; the '538P75' label box and callout line (around 9,900-13,900 bbl/d) could not be fully bridged for the efficiency curve, so the efficiency fit only covers 1,200-10,500 bbl/d (rise, BEP and most of the decline; the last ~3,000 bbl/d before shutoff is not covered). The head curve was successfully traced across its full range. Power (thin dotted line) was traced in a y-band restricted to low BHP values and truncated at ~9,700 bbl/d."
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        63.018072767609944,
+        0.0007832356980654247,
+        -1.326094778619852e-06,
+        2.613092682333659e-10,
+        -2.6136222012037738e-14,
+        8.468878829707242e-19
+      ],
+      "qa": {
+        "n_points": 1034,
+        "x_min": 22.875443211710035,
+        "x_max": 12158.298067025045,
+        "r2": 0.9999799156562572,
+        "rmse": 0.08112780799310045,
+        "max_abs_resid": 1.286338662266786,
+        "rmse_pct_span": 0.10146478066551114,
+        "max_resid_pct_span": 1.6087957194599223,
+        "largest_gap_pct_range": 0.6597549481621127,
+        "roundtrip_err_pct_span": 8.886603079859148e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 1.3013763642442786,
+          "4": 1.4077739854876652,
+          "5": 1.6087957194599223,
+          "6": 1.6047757683435224,
+          "7": 1.5978950953669138,
+          "8": 1.58982892553328,
+          "9": 1.589773102950737
+        },
+        "flags": []
+      }
+    },
+    "eff": {
+      "coeffs": [
+        -2.386400090345603,
+        0.02538925862591806,
+        -4.642154421896772e-06,
+        6.511638229863548e-10,
+        -4.57576206219894e-14,
+        7.718928436320537e-19
+      ],
+      "qa": {
+        "n_points": 782,
+        "x_min": 1189.5230470090332,
+        "x_max": 10557.017042205189,
+        "r2": 0.9999812251650457,
+        "rmse": 0.06331079949854766,
+        "max_abs_resid": 0.21621914960864075,
+        "rmse_pct_span": 0.07918143659723442,
+        "max_resid_pct_span": 0.27042057629105243,
+        "largest_gap_pct_range": 1.831501831501825,
+        "roundtrip_err_pct_span": 1.3329904619788721e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 3.1806372954395083,
+          "4": 0.5017269835495376,
+          "5": 0.2704205762909813,
+          "6": 0.2306282265491949,
+          "7": 0.2132080269479516,
+          "8": 0.20438973946111658,
+          "9": 0.19517591195815032
+        },
+        "flags": []
+      }
+    },
+    "power": {
+      "coeffs": [
+        1.8712178754313,
+        0.0005004904283604743,
+        -8.898050245280935e-08,
+        1.0904141825402097e-11,
+        -9.183262483296976e-16,
+        3.209509130970393e-20
+      ],
+      "qa": {
+        "n_points": 208,
+        "x_min": 2333.2952075946446,
+        "x_max": 9744.938808189405,
+        "r2": 0.9944358647846738,
+        "rmse": 0.006816709120252479,
+        "max_abs_resid": 0.019797021682999016,
+        "rmse_pct_span": 0.042627771885366046,
+        "max_resid_pct_span": 0.12379916898687776,
+        "largest_gap_pct_range": 7.253086419753085,
+        "roundtrip_err_pct_span": 5.55415617720821e-15,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.12878351133079868,
+          "4": 0.1339613628739571,
+          "5": 0.12379916898687499,
+          "6": 0.10861072163867136,
+          "7": 0.12616365942475052,
+          "8": 0.1284633295405133,
+          "9": 0.12784228792061927
+        },
+        "flags": []
+      }
+    }
+  },
+  "flags": [],
+  "calibration_resid_px": {
+    "x": 4.771027306560427e-13,
+    "head": 0.47058823529413657,
+    "eff": 0.47058823529413657,
+    "power": 0.4237030494997973
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 63.018072767609944,
+    "flow_max_bpd": 12166.976488358554,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 7642.997904914861,
+    "bep_eff_pct": 75.20462944949037,
+    "bep_bhp_hp_per_stage": 3.070393112948448,
+    "hydraulic_check_max_diff_pts": 0.2447114874258176,
+    "hydraulic_check_mean_diff_pts": 0.16950145134825856
+  },
+  "status": "ok"
+}

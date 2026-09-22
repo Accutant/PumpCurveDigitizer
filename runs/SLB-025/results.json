@@ -1,0 +1,144 @@
+{
+  "config": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/runs/SLB-025/sheet.json",
+  "meta": {
+    "manufacturer": "REDA",
+    "catalog_source": "REDA ESP systems",
+    "model": "H28000N",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "pump_od_in": 5.63,
+    "ror_min_bpd": 28000,
+    "ror_max_bpd": 36000,
+    "shaft_limit_hp": 637,
+    "housing_burst_psi": 3000,
+    "notes": "Housing burst: Standard 3,000 psi used (Buttress Not applicable, Welded 3,600 psi). High-strength shaft option 1,019 hp not used. Power ticks reused from the efficiency OCR column (identical 0-60 scale, same gridline rows, confirmed visually)."
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        54.2555544768645,
+        0.0002584335750643791,
+        -1.605073461191684e-07,
+        1.1799156413764397e-11,
+        -2.896440496752604e-16,
+        1.864086455110638e-21
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "ft/stage"
+      },
+      "qa": {
+        "n_points": 724,
+        "x_min": 84.5846513201218,
+        "x_max": 37269.55098528279,
+        "r2": 0.9999631151789347,
+        "rmse": 0.03324733691871533,
+        "max_abs_resid": 0.11128793669830372,
+        "rmse_pct_span": 0.04630321391006604,
+        "max_resid_pct_span": 0.15498953047426683,
+        "largest_gap_pct_range": 0.13831258644538086,
+        "roundtrip_err_pct_span": 8.906088066518515e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 5.039548039879231,
+          "4": 0.8773224455074633,
+          "5": 0.1549895304742223,
+          "6": 0.15177045845691592,
+          "7": 0.17188393415884604,
+          "8": 0.16452919664556998,
+          "9": 0.15352113358144584
+        },
+        "flags": []
+      }
+    },
+    "power": {
+      "coeffs": [
+        5.362592408616137,
+        0.0003676471416364265,
+        -1.2648964761657298e-08,
+        1.1334512241606565e-12,
+        -3.425704255499469e-17,
+        3.027719046954113e-22
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "hp/stage"
+      },
+      "qa": {
+        "n_points": 724,
+        "x_min": 84.5846513201218,
+        "x_max": 37269.55098528279,
+        "r2": 0.9999146263283701,
+        "rmse": 0.031148304844337324,
+        "max_abs_resid": 0.08218732658838057,
+        "rmse_pct_span": 0.043379914176868345,
+        "max_resid_pct_span": 0.11446141906108759,
+        "largest_gap_pct_range": 0.13831258644538086,
+        "roundtrip_err_pct_span": 1.4843480110864194e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.36041349915655607,
+          "4": 0.16516944892336247,
+          "5": 0.11446141906108759,
+          "6": 0.11600782136273181,
+          "7": 0.11629905140012173,
+          "8": 0.11545699778950816,
+          "9": 0.11524568307310076
+        },
+        "flags": []
+      }
+    },
+    "eff": {
+      "coeffs": [
+        -0.1462558649572756,
+        0.007459869724340616,
+        -4.4821625799702766e-07,
+        1.45568576872929e-11,
+        -1.453126646490697e-16,
+        -1.1358837898087546e-21
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "%"
+      },
+      "qa": {
+        "n_points": 722,
+        "x_min": 136.0161400254642,
+        "x_max": 37269.55098528279,
+        "r2": 0.9999928571582968,
+        "rmse": 0.04588700463761696,
+        "max_abs_resid": 0.15640641784391818,
+        "rmse_pct_span": 0.06390634523969173,
+        "max_resid_pct_span": 0.21782556118825375,
+        "largest_gap_pct_range": 0.2770083102493067,
+        "roundtrip_err_pct_span": 1.0885218747967074e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 9.761631218490987,
+          "4": 0.588838373793508,
+          "5": 0.21782556118824387,
+          "6": 0.2226628405471424,
+          "7": 0.26315778073966195,
+          "8": 0.2817676627786045,
+          "9": 0.2367722725652856
+        },
+        "flags": []
+      }
+    }
+  },
+  "flags": [],
+  "calibration_resid_px": {
+    "x": 0.288806979446663,
+    "head": 0.2855828220860327,
+    "power": 0.2855828220860327,
+    "eff": 0.2855828220860327
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 54.2555544768645,
+    "flow_max_bpd": 37269.55098528279,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 28995.98770768232,
+    "bep_eff_pct": 68.19213497394068,
+    "bep_bhp_hp_per_stage": 15.010273653238752,
+    "hydraulic_check_max_diff_pts": 0.13503358867658477,
+    "hydraulic_check_mean_diff_pts": 0.05348785251983485
+  },
+  "status": "ok"
+}

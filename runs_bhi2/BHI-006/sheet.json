@@ -1,0 +1,137 @@
+{
+  "image": "sheet.png",
+  "frame": [
+    165,
+    124,
+    805,
+    579
+  ],
+  "exclude_boxes": [],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        249.5,
+        10000.0
+      ],
+      [
+        329.5,
+        20000.0
+      ],
+      [
+        408.5,
+        30000.0
+      ],
+      [
+        487.25,
+        40000.0
+      ],
+      [
+        566.5,
+        50000.0
+      ],
+      [
+        645.5,
+        60000.0
+      ],
+      [
+        725.5,
+        70000.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          394.0,
+          100.0
+        ],
+        [
+          304.5,
+          150.0
+        ],
+        [
+          214.5,
+          200.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "eff": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          483.5,
+          20.0
+        ],
+        [
+          394.0,
+          40.0
+        ],
+        [
+          304.5,
+          60.0
+        ],
+        [
+          214.5,
+          80.0
+        ]
+      ],
+      "unit": "%"
+    },
+    "power": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          483.5,
+          20.0
+        ],
+        [
+          394.0,
+          40.0
+        ],
+        [
+          304.5,
+          60.0
+        ],
+        [
+          214.5,
+          80.0
+        ]
+      ],
+      "unit": "hp"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0302ff",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ff0000",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#038003",
+      "tol": 35,
+      "style": "solid"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "model": "WJJ1200A",
+    "series": "1000",
+    "base_frequency_hz": 60,
+    "rpm": 3500
+  }
+}

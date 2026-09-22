@@ -1,0 +1,15 @@
+# Local Claude Code settings (machine-specific permissions, not shared)
+.claude/settings.local.json
+
+# Timestamped CSV backups written by catalogue.py -- redundant with git history
+# once ESPPump_Coefficients.csv itself is tracked
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / OneDrive cruft
+.DS_Store
+Thumbs.db
+desktop.ini

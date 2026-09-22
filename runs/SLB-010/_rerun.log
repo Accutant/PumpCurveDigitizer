@@ -1,0 +1,13 @@
+status: review
+  head  n=772  x=66..54940  R2=0.99998  rmse=0.05%  max=0.14%  gap=1%
+  power n=776  x=66..54869  R2=0.99984  rmse=0.04%  max=0.12%  gap=0%
+  eff   n=773  x=208..54798  R2=0.99996  rmse=0.14%  max=0.58%  gap=0%
+  shutoff_head_ft_per_stage = 214.4
+  flow_max_bpd = 5.494e+04
+  flow_min_bpd = 0
+  bep_bpd_fit = 3.41e+04
+  bep_eff_pct = 71.44
+  bep_bhp_hp_per_stage = 55.05
+  hydraulic_check_max_diff_pts = 0.5347
+  hydraulic_check_mean_diff_pts = 0.1591
+  FLAG: axis calibration residual > 3 px: check tick assignments

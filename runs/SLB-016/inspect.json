@@ -1,0 +1,119 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/SLB\\SLB-016.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 10.5,
+  "dpi": 200,
+  "size": [
+    966,
+    661
+  ],
+  "frame": [
+    76,
+    256,
+    846,
+    307
+  ],
+  "axes": [],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#094683",
+      "rgb": [
+        9,
+        70,
+        131
+      ],
+      "pixels": 193
+    },
+    {
+      "kind": "dark",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "pixels": 178
+    },
+    {
+      "kind": "color",
+      "hex": "#4382a3",
+      "rgb": [
+        67,
+        130,
+        163
+      ],
+      "pixels": 143
+    },
+    {
+      "kind": "color",
+      "hex": "#792f0b",
+      "rgb": [
+        121,
+        47,
+        11
+      ],
+      "pixels": 82
+    },
+    {
+      "kind": "color",
+      "hex": "#fcc94d",
+      "rgb": [
+        252,
+        201,
+        77
+      ],
+      "pixels": 60
+    },
+    {
+      "kind": "color",
+      "hex": "#d67c1f",
+      "rgb": [
+        214,
+        124,
+        31
+      ],
+      "pixels": 51
+    },
+    {
+      "kind": "color",
+      "hex": "#8be5fd",
+      "rgb": [
+        139,
+        229,
+        253
+      ],
+      "pixels": 28
+    }
+  ],
+  "labels": [
+    {
+      "text": "Operating",
+      "box": [
+        494,
+        266,
+        550,
+        288
+      ]
+    },
+    {
+      "text": "range",
+      "box": [
+        545,
+        269,
+        581,
+        288
+      ]
+    },
+    {
+      "text": "Head",
+      "box": [
+        175,
+        287,
+        207,
+        305
+      ]
+    }
+  ]
+}

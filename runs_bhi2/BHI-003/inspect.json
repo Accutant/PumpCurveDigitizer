@@ -1,0 +1,236 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/BHI\\BHI-003.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 7.5,
+  "dpi": 200,
+  "size": [
+    962,
+    706
+  ],
+  "frame": [
+    165,
+    124,
+    805,
+    579
+  ],
+  "axes": [
+    {
+      "a": -21541.679472731612,
+      "b": 126.23934250816747,
+      "ticks": [
+        {
+          "value": 10000.0,
+          "px": 249.5,
+          "ocr_px": 249.625
+        },
+        {
+          "value": 20000.0,
+          "px": 329.5,
+          "ocr_px": 329.0
+        },
+        {
+          "value": 30000.0,
+          "px": 408.5,
+          "ocr_px": 407.25
+        },
+        {
+          "value": 40000.0,
+          "px": 487.5,
+          "ocr_px": 487.25
+        },
+        {
+          "value": 50000.0,
+          "px": 566.5,
+          "ocr_px": 566.75
+        },
+        {
+          "value": 60000.0,
+          "px": 645.5,
+          "ocr_px": 645.875
+        },
+        {
+          "value": 70000.0,
+          "px": 725.5,
+          "ocr_px": 724.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.42921550946812204,
+      "value_range": [
+        10000.0,
+        70000.0
+      ],
+      "pos": 586.5,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 7,
+      "snap_offset_px": 0.25,
+      "id": "B0"
+    },
+    {
+      "a": 383.5778637621296,
+      "b": -0.6688942261229371,
+      "ticks": [
+        {
+          "value": 50.0,
+          "px": 498.5,
+          "ocr_px": 498.5
+        },
+        {
+          "value": 100.0,
+          "px": 424.0,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 150.0,
+          "px": 349.5,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 200.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 250.0,
+          "px": 199.5,
+          "ocr_px": 198.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.3000000000000682,
+      "value_range": [
+        50.0,
+        250.0
+      ],
+      "pos": 155.75,
+      "side": "left",
+      "orient": "v",
+      "snapped": 5,
+      "snap_offset_px": 1.0,
+      "id": "L1"
+    },
+    {
+      "a": 153.43114550485183,
+      "b": -0.2675576904491749,
+      "ticks": [
+        {
+          "value": 20.0,
+          "px": 498.5,
+          "ocr_px": 498.5
+        },
+        {
+          "value": 40.0,
+          "px": 424.0,
+          "ocr_px": 423.5
+        },
+        {
+          "value": 60.0,
+          "px": 349.5,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 80.0,
+          "px": 274.5,
+          "ocr_px": 273.5
+        },
+        {
+          "value": 100.0,
+          "px": 199.5,
+          "ocr_px": 198.5
+        }
+      ],
+      "rejected": [
+        "60"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.30000000000012506,
+      "value_range": [
+        20.0,
+        100.0
+      ],
+      "pos": 832.125,
+      "side": "right",
+      "orient": "v",
+      "snapped": 5,
+      "snap_offset_px": 1.0,
+      "id": "R2"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#0e840e",
+      "rgb": [
+        14,
+        132,
+        14
+      ],
+      "pixels": 1630
+    },
+    {
+      "kind": "color",
+      "hex": "#0708ff",
+      "rgb": [
+        7,
+        8,
+        255
+      ],
+      "pixels": 1171
+    },
+    {
+      "kind": "color",
+      "hex": "#e0da5d",
+      "rgb": [
+        224,
+        218,
+        93
+      ],
+      "pixels": 943
+    },
+    {
+      "kind": "color",
+      "hex": "#ff0101",
+      "rgb": [
+        255,
+        1,
+        1
+      ],
+      "pixels": 869
+    },
+    {
+      "kind": "color",
+      "hex": "#6a74ec",
+      "rgb": [
+        106,
+        116,
+        236
+      ],
+      "pixels": 510
+    },
+    {
+      "kind": "color",
+      "hex": "#e56567",
+      "rgb": [
+        229,
+        101,
+        103
+      ],
+      "pixels": 465
+    }
+  ],
+  "labels": [
+    {
+      "text": "SA",
+      "box": [
+        697,
+        540,
+        728,
+        562
+      ]
+    }
+  ]
+}

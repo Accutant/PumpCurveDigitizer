@@ -1,0 +1,351 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/SLB\\SLB-005.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 10.5,
+  "dpi": 200,
+  "size": [
+    978,
+    689
+  ],
+  "frame": [
+    81,
+    204,
+    860,
+    613
+  ],
+  "axes": [
+    {
+      "a": -422.2658579123842,
+      "b": 5.144028485420353,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 82.0,
+          "ocr_px": 82.5
+        },
+        {
+          "value": 500.0,
+          "px": 179.5,
+          "ocr_px": 179.625
+        },
+        {
+          "value": 1000.0,
+          "px": 276.5,
+          "ocr_px": 277.25
+        },
+        {
+          "value": 1500.0,
+          "px": 373.5,
+          "ocr_px": 374.5
+        },
+        {
+          "value": 2000.0,
+          "px": 470.5,
+          "ocr_px": 471.125
+        },
+        {
+          "value": 2500.0,
+          "px": 568.5,
+          "ocr_px": 568.5
+        },
+        {
+          "value": 3000.0,
+          "px": 665.5,
+          "ocr_px": 665.75
+        },
+        {
+          "value": 3500.0,
+          "px": 762.5,
+          "ocr_px": 762.875
+        },
+        {
+          "value": 4000.0,
+          "px": 859.5,
+          "ocr_px": 860.125
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.41102728242651665,
+      "value_range": [
+        0.0,
+        4000.0
+      ],
+      "pos": 624.625,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 9,
+      "snap_offset_px": -0.5,
+      "id": "B0"
+    },
+    {
+      "a": 105.16294888213292,
+      "b": -0.17186270393663927,
+      "ticks": [
+        {
+          "value": 10.0,
+          "px": 553.5,
+          "ocr_px": 549.0
+        },
+        {
+          "value": 20.0,
+          "px": 495.5,
+          "ocr_px": 491.0
+        },
+        {
+          "value": 30.0,
+          "px": 437.5,
+          "ocr_px": 433.0
+        },
+        {
+          "value": 40.0,
+          "px": 379.5,
+          "ocr_px": 375.0
+        },
+        {
+          "value": 50.0,
+          "px": 321.0,
+          "ocr_px": 316.0
+        },
+        {
+          "value": 60.0,
+          "px": 262.5,
+          "ocr_px": 258.0
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.34299042474867747,
+      "value_range": [
+        10.0,
+        60.0
+      ],
+      "pos": 69.125,
+      "side": "left",
+      "orient": "v",
+      "snapped": 6,
+      "snap_offset_px": 4.5,
+      "id": "L1"
+    },
+    {
+      "a": 5.257583386748957,
+      "b": -0.008591567436629982,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 612.0,
+          "ocr_px": 608.0
+        },
+        {
+          "value": 0.5,
+          "px": 553.5,
+          "ocr_px": 549.0
+        },
+        {
+          "value": 1.0,
+          "px": 495.5,
+          "ocr_px": 491.0
+        },
+        {
+          "value": 1.5,
+          "px": 437.5,
+          "ocr_px": 433.0
+        },
+        {
+          "value": 2.0,
+          "px": 379.5,
+          "ocr_px": 375.0
+        },
+        {
+          "value": 2.5,
+          "px": 321.0,
+          "ocr_px": 316.0
+        },
+        {
+          "value": 3.0,
+          "px": 262.5,
+          "ocr_px": 258.0
+        }
+      ],
+      "rejected": [
+        "4,000"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.33945557357640155,
+      "value_range": [
+        0.0,
+        3.0
+      ],
+      "pos": 878.375,
+      "side": "right",
+      "orient": "v",
+      "snapped": 7,
+      "snap_offset_px": 4.5,
+      "id": "R2"
+    },
+    {
+      "a": 104.7477769666216,
+      "b": -0.1712154577115023,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 612.0,
+          "ocr_px": 608.0
+        },
+        {
+          "value": 10.0,
+          "px": 553.5,
+          "ocr_px": 549.0
+        },
+        {
+          "value": 20.0,
+          "px": 495.5,
+          "ocr_px": 491.0
+        },
+        {
+          "value": 30.0,
+          "px": 437.5,
+          "ocr_px": 433.0
+        },
+        {
+          "value": 40.0,
+          "px": 374.0
+        },
+        {
+          "value": 50.0,
+          "px": 321.0,
+          "ocr_px": 316.0
+        },
+        {
+          "value": 60.0,
+          "px": 262.5,
+          "ocr_px": 258.0
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 4.165487112276253,
+      "value_range": [
+        0.0,
+        60.0
+      ],
+      "pos": 957.25,
+      "side": "right",
+      "orient": "v",
+      "snapped": 6,
+      "snap_offset_px": 4.5,
+      "id": "R3"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#ed2628",
+      "rgb": [
+        237,
+        38,
+        40
+      ],
+      "pixels": 1146
+    },
+    {
+      "kind": "color",
+      "hex": "#034483",
+      "rgb": [
+        3,
+        68,
+        131
+      ],
+      "pixels": 1084
+    },
+    {
+      "kind": "dark",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "pixels": 866
+    },
+    {
+      "kind": "color",
+      "hex": "#f38a6a",
+      "rgb": [
+        243,
+        138,
+        106
+      ],
+      "pixels": 678
+    },
+    {
+      "kind": "color",
+      "hex": "#ffef97",
+      "rgb": [
+        255,
+        239,
+        151
+      ],
+      "pixels": 590
+    },
+    {
+      "kind": "color",
+      "hex": "#4b7ca3",
+      "rgb": [
+        75,
+        124,
+        163
+      ],
+      "pixels": 540
+    },
+    {
+      "kind": "color",
+      "hex": "#68472a",
+      "rgb": [
+        104,
+        71,
+        42
+      ],
+      "pixels": 262
+    }
+  ],
+  "labels": [
+    {
+      "text": "Head",
+      "box": [
+        226,
+        242,
+        259,
+        260
+      ]
+    },
+    {
+      "text": "Power",
+      "box": [
+        272,
+        475,
+        310,
+        493
+      ]
+    },
+    {
+      "text": "Operating",
+      "box": [
+        555,
+        517,
+        611,
+        539
+      ]
+    },
+    {
+      "text": "range",
+      "box": [
+        607,
+        520,
+        643,
+        539
+      ]
+    }
+  ]
+}

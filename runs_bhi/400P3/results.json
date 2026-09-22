@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "model": "400P3",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "notes": "Head, Power and Efficiency curves for this pump share the same olive colour on the chart, so per-colour extraction is not possible. Digitized with a custom column-wise velocity-tracked tracer seeded at each curve's known start point. Power (thin dotted line) was traced in a y-band restricted to low BHP values and truncated at ~514 bbl/d, before the declining head curve's tail re-enters that same band near shutoff (~640 bbl/d) and risks contaminating it; the power fit does not cover the last ~20% of the flow range."
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        21.963173322904524,
+        0.08113628203929779,
+        -0.000901306153405007,
+        3.190970599817563e-06,
+        -5.003403766776045e-09,
+        2.758539623477307e-12
+      ],
+      "qa": {
+        "n_points": 863,
+        "x_min": 0.05803258550079704,
+        "x_max": 619.4154307671884,
+        "r2": 0.9853197550526197,
+        "rmse": 0.9129287567273563,
+        "max_abs_resid": 3.599133853625613,
+        "rmse_pct_span": 1.826220063408819,
+        "max_resid_pct_span": 7.19969702558942,
+        "largest_gap_pct_range": 12.68382352941176,
+        "roundtrip_err_pct_span": 1.989914707527192e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 8.895461502806485,
+          "4": 7.967634309900859,
+          "5": 7.199697025589412,
+          "6": 6.916238347816376,
+          "7": 6.0094496065712,
+          "8": 6.413476916790755,
+          "9": 5.680954058376402
+        },
+        "flags": [
+          "rmse 1.83% of axis span",
+          "max residual 7.20% of axis span",
+          "gap of 13% of flow range in extracted points"
+        ]
+      }
+    },
+    "eff": {
+      "coeffs": [
+        -0.1270267392585822,
+        0.2394758600467453,
+        -0.00020067249806439273,
+        -1.0278677617096834e-06,
+        2.4903500107690336e-09,
+        -2.1253726276563728e-12
+      ],
+      "qa": {
+        "n_points": 1081,
+        "x_min": 0.627294900006028,
+        "x_max": 619.4154307671884,
+        "r2": 0.9999660730495185,
+        "rmse": 0.0710372411395151,
+        "max_abs_resid": 0.4278266988617454,
+        "rmse_pct_span": 0.14210269318631644,
+        "max_resid_pct_span": 0.8558232998641505,
+        "largest_gap_pct_range": 0.45998160073596983,
+        "roundtrip_err_pct_span": 8.172863977343824e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 4.183094395572268,
+          "4": 1.7094156007867551,
+          "5": 0.8558232998641035,
+          "6": 0.4803756766258429,
+          "7": 0.30470790005649373,
+          "8": 0.3035730679230062,
+          "9": 0.3014755047314908
+        },
+        "flags": []
+      }
+    },
+    "power": {
+      "coeffs": [
+        0.06824131575560241,
+        0.00020206598623785093,
+        -1.2821413083081388e-06,
+        7.640131301192275e-09,
+        -1.8003257577579692e-11,
+        1.3853617268354282e-14
+      ],
+      "qa": {
+        "n_points": 294,
+        "x_min": 35.921558399330124,
+        "x_max": 510.6863286966899,
+        "r2": 0.988574503944866,
+        "rmse": 0.0014227526389633946,
+        "max_abs_resid": 0.01234092124908133,
+        "rmse_pct_span": 0.14227554496672784,
+        "max_resid_pct_span": 1.2340945629057394,
+        "largest_gap_pct_range": 7.434052757793783,
+        "roundtrip_err_pct_span": 2.3592285880682613e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 1.3194941926375232,
+          "4": 1.302904677842492,
+          "5": 1.2340945629057298,
+          "6": 1.1626443411552465,
+          "7": 1.0857792194490892,
+          "8": 1.050580714943792,
+          "9": 1.0493369785580433
+        },
+        "flags": []
+      }
+    }
+  },
+  "flags": [
+    "head: rmse 1.83% of axis span",
+    "head: max residual 7.20% of axis span",
+    "head: gap of 13% of flow range in extracted points"
+  ],
+  "calibration_resid_px": {
+    "x": 0.396967608545808,
+    "head": 0.484900564694433,
+    "eff": 0.484900564694433,
+    "power": 0.45454545454548834
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 21.963173322904524,
+    "flow_max_bpd": 616.8775472374314,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 334.5469741201559,
+    "bep_eff_pct": 41.33127902579853,
+    "bep_bhp_hp_per_stage": 0.1109514512067043,
+    "hydraulic_check_max_diff_pts": 4.93642115680661,
+    "hydraulic_check_mean_diff_pts": -2.0071596000770047
+  },
+  "status": "review"
+}

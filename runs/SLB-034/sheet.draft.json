@@ -1,0 +1,398 @@
+{
+  "image": "sheet.png",
+  "frame": [
+    71,
+    190,
+    847,
+    597
+  ],
+  "exclude_boxes": [
+    [
+      146,
+      257,
+      178,
+      275
+    ],
+    [
+      150,
+      389,
+      205,
+      415
+    ],
+    [
+      208,
+      384,
+      238,
+      414
+    ],
+    [
+      281,
+      474,
+      319,
+      492
+    ],
+    [
+      509,
+      555,
+      565,
+      577
+    ],
+    [
+      561,
+      558,
+      597,
+      577
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        72.0,
+        0.0
+      ],
+      [
+        182.5,
+        500.0
+      ],
+      [
+        293.5,
+        1000.0
+      ],
+      [
+        404.0,
+        1500.0
+      ],
+      [
+        514.5,
+        2000.0
+      ],
+      [
+        625.0,
+        2500.0
+      ],
+      [
+        736.0,
+        3000.0
+      ],
+      [
+        846.5,
+        3500.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          538.5,
+          10.0
+        ],
+        [
+          480.5,
+          20.0
+        ],
+        [
+          422.5,
+          30.0
+        ],
+        [
+          364.5,
+          40.0
+        ],
+        [
+          306.5,
+          50.0
+        ],
+        [
+          248.5,
+          60.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          596.0,
+          0.0
+        ],
+        [
+          538.5,
+          0.5
+        ],
+        [
+          480.5,
+          1.0
+        ],
+        [
+          422.5,
+          1.5
+        ],
+        [
+          364.5,
+          2.0
+        ],
+        [
+          306.5,
+          2.5
+        ],
+        [
+          248.5,
+          3.0
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "R3",
+      "ticks": [
+        [
+          596.0,
+          0.0
+        ],
+        [
+          538.5,
+          10.0
+        ],
+        [
+          480.5,
+          20.0
+        ],
+        [
+          422.5,
+          30.0
+        ],
+        [
+          364.5,
+          40.0
+        ],
+        [
+          306.5,
+          50.0
+        ],
+        [
+          248.5,
+          60.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0b4783",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ed2c2d",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#000000",
+      "tol": 40,
+      "style": "solid"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "REDA",
+    "model": null,
+    "base_frequency_hz": null,
+    "catalog_source": "REDA ESP systems",
+    "catalog_version": null,
+    "series": null,
+    "pump_od_in": null,
+    "stage_type": null,
+    "construction": null,
+    "rpm": null,
+    "stages_basis": 1,
+    "ror_min_bpd": null,
+    "bep_bpd": null,
+    "ror_max_bpd": null,
+    "shaft_limit_hp": null,
+    "housing_burst_psi": null,
+    "freq_min_hz": 30,
+    "freq_max_hz": 80,
+    "freq_step_hz": 10,
+    "notes": ""
+  },
+  "_candidates": {
+    "B0": {
+      "side": "bottom",
+      "range": [
+        0.0,
+        3500.0
+      ],
+      "ticks": [
+        [
+          72.0,
+          0.0
+        ],
+        [
+          182.5,
+          500.0
+        ],
+        [
+          293.5,
+          1000.0
+        ],
+        [
+          404.0,
+          1500.0
+        ],
+        [
+          514.5,
+          2000.0
+        ],
+        [
+          625.0,
+          2500.0
+        ],
+        [
+          736.0,
+          3000.0
+        ],
+        [
+          846.5,
+          3500.0
+        ]
+      ]
+    },
+    "L1": {
+      "side": "left",
+      "range": [
+        10.0,
+        60.0
+      ],
+      "ticks": [
+        [
+          538.5,
+          10.0
+        ],
+        [
+          480.5,
+          20.0
+        ],
+        [
+          422.5,
+          30.0
+        ],
+        [
+          364.5,
+          40.0
+        ],
+        [
+          306.5,
+          50.0
+        ],
+        [
+          248.5,
+          60.0
+        ]
+      ]
+    },
+    "R2": {
+      "side": "right",
+      "range": [
+        0.0,
+        3.0
+      ],
+      "ticks": [
+        [
+          596.0,
+          0.0
+        ],
+        [
+          538.5,
+          0.5
+        ],
+        [
+          480.5,
+          1.0
+        ],
+        [
+          422.5,
+          1.5
+        ],
+        [
+          364.5,
+          2.0
+        ],
+        [
+          306.5,
+          2.5
+        ],
+        [
+          248.5,
+          3.0
+        ]
+      ]
+    },
+    "R3": {
+      "side": "right",
+      "range": [
+        0.0,
+        60.0
+      ],
+      "ticks": [
+        [
+          596.0,
+          0.0
+        ],
+        [
+          538.5,
+          10.0
+        ],
+        [
+          480.5,
+          20.0
+        ],
+        [
+          422.5,
+          30.0
+        ],
+        [
+          364.5,
+          40.0
+        ],
+        [
+          306.5,
+          50.0
+        ],
+        [
+          248.5,
+          60.0
+        ]
+      ]
+    }
+  },
+  "_colors": [
+    "#ed1d24",
+    "#054583",
+    "#000000",
+    "#f4866c",
+    "#477ca2",
+    "#facd7d",
+    "#664125"
+  ],
+  "_todo": "Confirm roles/units against review.png: copy the right candidate ticks into y_axes.head/power/eff, set curve colours, fill meta from the sheet text, then delete the _ keys (optional).",
+  "_labels": [
+    "Head",
+    "Efficiency",
+    "Fi",
+    "Power",
+    "Operating",
+    "range"
+  ],
+  "_template": "REDA ESP systems (bbl/d, ft)",
+  "_template_missing": []
+}

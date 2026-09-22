@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "model": "538P62",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "notes": "Head, Power and Efficiency curves for this pump share the same orange colour on this 3-pump chart. Digitized with a custom column-wise velocity-tracked tracer seeded at each curve's known start point, with the '538P62' label box and its callout line masked out. Power (thin dotted line) was traced in a y-band restricted to low BHP values, seeded past the orange dashed operating-range boundary line (~2,000 bbl/d) which otherwise derails the tracker."
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        62.87098592047509,
+        -0.005769808396488227,
+        1.867896591501737e-06,
+        -3.230556966653812e-10,
+        1.7802678770378236e-14,
+        -4.017742123080263e-19
+      ],
+      "qa": {
+        "n_points": 719,
+        "x_min": 22.875443211710035,
+        "x_max": 10465.51526935834,
+        "r2": 0.9990347243777828,
+        "rmse": 0.5214694861303355,
+        "max_abs_resid": 4.078343185837156,
+        "rmse_pct_span": 0.6521905169491466,
+        "max_resid_pct_span": 5.100694904327274,
+        "largest_gap_pct_range": 16.757940854326396,
+        "roundtrip_err_pct_span": 9.775263387845063e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 5.5530942849397595,
+          "4": 5.244391897719262,
+          "5": 5.100694904327274,
+          "6": 3.743395030140017,
+          "7": 2.906306155576149,
+          "8": 2.8488971886278205,
+          "9": 2.741835810249721
+        },
+        "flags": [
+          "rmse 0.65% of axis span",
+          "max residual 5.10% of axis span",
+          "gap of 17% of flow range in extracted points"
+        ]
+      }
+    },
+    "eff": {
+      "coeffs": [
+        0.4012275783642423,
+        0.018900256348308588,
+        -2.359470671683849e-06,
+        3.735532065694444e-10,
+        -2.5164987343144575e-14,
+        -5.126609485452403e-19
+      ],
+      "qa": {
+        "n_points": 898,
+        "x_min": 22.875443211710035,
+        "x_max": 10465.51526935834,
+        "r2": 0.9999431183576319,
+        "rmse": 0.170345188214428,
+        "max_abs_resid": 0.7459420230342246,
+        "rmse_pct_span": 0.21304701294372555,
+        "max_resid_pct_span": 0.932933424785643,
+        "largest_gap_pct_range": 0.5476451259583798,
+        "roundtrip_err_pct_span": 7.775777694876754e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 9.076426601793974,
+          "4": 0.9789880013898712,
+          "5": 0.932933424785643,
+          "6": 0.7195226685422653,
+          "7": 0.7289795797457601,
+          "8": 0.6752997498163479,
+          "9": 0.668712194312651
+        },
+        "flags": []
+      }
+    },
+    "power": {
+      "coeffs": [
+        1.7796145402557486,
+        0.0008643874508756102,
+        -2.890850368983205e-07,
+        4.964586376476569e-11,
+        -4.375973430822091e-15,
+        1.472960948688088e-19
+      ],
+      "qa": {
+        "n_points": 183,
+        "x_min": 2333.2952075946446,
+        "x_max": 8578.291204392082,
+        "r2": 0.9977807713413935,
+        "rmse": 0.005456665568191648,
+        "max_abs_resid": 0.011833881529595747,
+        "rmse_pct_span": 0.03412284300125595,
+        "max_resid_pct_span": 0.07400227785330088,
+        "largest_gap_pct_range": 0.9157509157509246,
+        "roundtrip_err_pct_span": 2.7770780886041046e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.10705261815230716,
+          "4": 0.08338951400228767,
+          "5": 0.07400227785329255,
+          "6": 0.07342651104044277,
+          "7": 0.073737290787471,
+          "8": 0.07506669225733033,
+          "9": 0.0763602084971018
+        },
+        "flags": []
+      }
+    }
+  },
+  "flags": [
+    "head: rmse 0.65% of axis span",
+    "head: max residual 5.10% of axis span",
+    "head: gap of 17% of flow range in extracted points"
+  ],
+  "calibration_resid_px": {
+    "x": 4.771027306560427e-13,
+    "head": 0.47058823529413657,
+    "eff": 0.47058823529413657,
+    "power": 0.4237030494997973
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 62.87098592047509,
+    "flow_max_bpd": 10462.163770893794,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 7013.359767941525,
+    "bep_eff_pct": 76.18094940848414,
+    "bep_bhp_hp_per_stage": 2.6609708395910525,
+    "hydraulic_check_max_diff_pts": 0.6295600061606308,
+    "hydraulic_check_mean_diff_pts": 0.05303208611193687
+  },
+  "status": "review"
+}

@@ -1,0 +1,240 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/BHI\\BHI-081.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 7.5,
+  "dpi": 200,
+  "size": [
+    962,
+    706
+  ],
+  "frame": [
+    160,
+    124,
+    805,
+    598
+  ],
+  "axes": [
+    {
+      "a": 51.084213591290734,
+      "b": -0.08903007166081636,
+      "ticks": [
+        {
+          "value": 5.0,
+          "px": 517.5,
+          "ocr_px": 516.5
+        },
+        {
+          "value": 10.0,
+          "px": 461.5,
+          "ocr_px": 460.5
+        },
+        {
+          "value": 15.0,
+          "px": 405.5,
+          "ocr_px": 404.5
+        },
+        {
+          "value": 20.0,
+          "px": 349.0,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 25.0,
+          "px": 293.0,
+          "ocr_px": 291.5
+        },
+        {
+          "value": 30.0,
+          "px": 237.0,
+          "ocr_px": 236.5
+        },
+        {
+          "value": 35.0,
+          "px": 180.5,
+          "ocr_px": 179.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.19634340222592073,
+      "value_range": [
+        5.0,
+        35.0
+      ],
+      "pos": 154.0,
+      "side": "left",
+      "orient": "v",
+      "snapped": 7,
+      "snap_offset_px": 1.0,
+      "id": "L0"
+    },
+    {
+      "a": 0.5109074228550226,
+      "b": -0.0008904698318653409,
+      "ticks": [
+        {
+          "value": 0.05,
+          "px": 517.5,
+          "ocr_px": 516.5
+        },
+        {
+          "value": 0.1,
+          "px": 461.5,
+          "ocr_px": 460.5
+        },
+        {
+          "value": 0.15,
+          "px": 405.5,
+          "ocr_px": 404.5
+        },
+        {
+          "value": 0.2,
+          "px": 349.0,
+          "ocr_px": 348.5
+        },
+        {
+          "value": 0.25,
+          "px": 293.0,
+          "ocr_px": 291.5
+        }
+      ],
+      "rejected": [
+        "60"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.20000000000015916,
+      "value_range": [
+        0.05,
+        0.25
+      ],
+      "pos": 828.125,
+      "side": "right",
+      "orient": "v",
+      "snapped": 5,
+      "snap_offset_px": 1.0,
+      "id": "R1"
+    },
+    {
+      "a": 204.36257815380569,
+      "b": -0.35618708544287425,
+      "ticks": [
+        {
+          "value": 20.0,
+          "px": 517.5,
+          "ocr_px": 516.5
+        },
+        {
+          "value": 40.0,
+          "px": 461.5,
+          "ocr_px": 460.5
+        },
+        {
+          "value": 60.0,
+          "px": 405.5,
+          "ocr_px": 404.5
+        },
+        {
+          "value": 80.0,
+          "px": 349.0,
+          "ocr_px": 348.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 0.20013357079238858,
+      "value_range": [
+        20.0,
+        80.0
+      ],
+      "pos": 862.0,
+      "side": "right",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 1.0,
+      "id": "R2"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#ff221e",
+      "rgb": [
+        255,
+        34,
+        30
+      ],
+      "pixels": 1446
+    },
+    {
+      "kind": "color",
+      "hex": "#0607ff",
+      "rgb": [
+        6,
+        7,
+        255
+      ],
+      "pixels": 1267
+    },
+    {
+      "kind": "color",
+      "hex": "#108111",
+      "rgb": [
+        16,
+        129,
+        17
+      ],
+      "pixels": 1253
+    },
+    {
+      "kind": "color",
+      "hex": "#e8e280",
+      "rgb": [
+        232,
+        226,
+        128
+      ],
+      "pixels": 1083
+    },
+    {
+      "kind": "color",
+      "hex": "#6c7eed",
+      "rgb": [
+        108,
+        126,
+        237
+      ],
+      "pixels": 571
+    },
+    {
+      "kind": "color",
+      "hex": "#28275f",
+      "rgb": [
+        40,
+        39,
+        95
+      ],
+      "pixels": 323
+    }
+  ],
+  "labels": [
+    {
+      "text": "Flowrate",
+      "box": [
+        451,
+        588,
+        494,
+        604
+      ]
+    },
+    {
+      "text": "(BPD)",
+      "box": [
+        489,
+        588,
+        523,
+        606
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+status: ok
+  head  n=736  x=44..24965  R2=0.99998  rmse=0.05%  max=0.15%  gap=5%
+  power n=776  x=44..24965  R2=0.99937  rmse=0.04%  max=0.12%  gap=0%
+  eff   n=774  x=76..24932  R2=0.99999  rmse=0.09%  max=0.33%  gap=0%
+  shutoff_head_ft_per_stage = 100.1
+  flow_max_bpd = 2.496e+04
+  flow_min_bpd = 0
+  bep_bpd_fit = 1.602e+04
+  bep_eff_pct = 71.39
+  bep_bhp_hp_per_stage = 11.8
+  hydraulic_check_max_diff_pts = 0.1076
+  hydraulic_check_mean_diff_pts = 0.02024

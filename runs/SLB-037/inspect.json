@@ -1,0 +1,341 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/SLB\\SLB-037.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 9.5,
+  "dpi": 200,
+  "size": [
+    844,
+    615
+  ],
+  "frame": [
+    83,
+    162,
+    691,
+    530
+  ],
+  "axes": [
+    {
+      "a": -1.015588135462367,
+      "b": 0.013189755159401972,
+      "ticks": [
+        {
+          "value": 1.0,
+          "px": 153.15
+        },
+        {
+          "value": 2.0,
+          "px": 228.5
+        },
+        {
+          "value": 3.0,
+          "px": 304.45
+        },
+        {
+          "value": 4.0,
+          "px": 379.85
+        },
+        {
+          "value": 7.0,
+          "px": 607.8
+        },
+        {
+          "value": 8.0,
+          "px": 683.65
+        }
+      ],
+      "rejected": [
+        "5,000",
+        "6,000",
+        "0",
+        "00",
+        "00",
+        "00",
+        "00",
+        "00",
+        "00"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.4139302130741953,
+      "value_range": [
+        1.0,
+        8.0
+      ],
+      "pos": 539.125,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 0,
+      "id": "B0"
+    },
+    {
+      "a": -1103.5347917558065,
+      "b": 13.174319332812356,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 83.75
+        },
+        {
+          "value": 5000.0,
+          "px": 463.375
+        },
+        {
+          "value": 6000.0,
+          "px": 539.125
+        }
+      ],
+      "rejected": [
+        "00",
+        "00",
+        "00",
+        "00",
+        "00",
+        "00"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.08466692342432225,
+      "value_range": [
+        0.0,
+        6000.0
+      ],
+      "pos": 539.125,
+      "side": "bottom",
+      "orient": "h",
+      "snapped": 0,
+      "id": "B1"
+    },
+    {
+      "a": 58.23289032602567,
+      "b": -0.11228455308671274,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 518.5
+        },
+        {
+          "value": 10.0,
+          "px": 429.5
+        },
+        {
+          "value": 25.0,
+          "px": 296.5
+        },
+        {
+          "value": 30.0,
+          "px": 251.5
+        },
+        {
+          "value": 35.0,
+          "px": 206.5
+        }
+      ],
+      "rejected": [
+        "5",
+        "15",
+        "20"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.5297225891679318,
+      "value_range": [
+        0.0,
+        35.0
+      ],
+      "pos": 69.25,
+      "side": "left",
+      "orient": "v",
+      "snapped": 0,
+      "id": "L2"
+    },
+    {
+      "a": 11.57214638513071,
+      "b": -0.022021200709648997,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 525.5,
+          "ocr_px": 523.5
+        },
+        {
+          "value": 1.0,
+          "px": 480.0,
+          "ocr_px": 477.625
+        },
+        {
+          "value": 2.0,
+          "px": 434.5,
+          "ocr_px": 433.625
+        },
+        {
+          "value": 3.0,
+          "px": 389.5,
+          "ocr_px": 389.625
+        },
+        {
+          "value": 4.0,
+          "px": 344.0,
+          "ocr_px": 342.625
+        },
+        {
+          "value": 5.0,
+          "px": 298.5,
+          "ocr_px": 295.625
+        },
+        {
+          "value": 6.0,
+          "px": 253.0,
+          "ocr_px": 252.625
+        },
+        {
+          "value": 7.0,
+          "px": 207.5,
+          "ocr_px": 207.625
+        }
+      ],
+      "rejected": [
+        "00",
+        "00"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.2321077467558439,
+      "value_range": [
+        0.0,
+        7.0
+      ],
+      "pos": 707.125,
+      "side": "right",
+      "orient": "v",
+      "snapped": 8,
+      "snap_offset_px": 1.125,
+      "id": "R3"
+    },
+    {
+      "a": 115.75908542790712,
+      "b": -0.220298568071688,
+      "ticks": [
+        {
+          "value": 0.0,
+          "px": 525.5,
+          "ocr_px": 524.5
+        },
+        {
+          "value": 10.0,
+          "px": 480.0,
+          "ocr_px": 478.5
+        },
+        {
+          "value": 20.0,
+          "px": 434.5,
+          "ocr_px": 433.5
+        },
+        {
+          "value": 30.0,
+          "px": 389.5,
+          "ocr_px": 387.5
+        },
+        {
+          "value": 40.0,
+          "px": 344.0,
+          "ocr_px": 341.5
+        },
+        {
+          "value": 50.0,
+          "px": 298.5,
+          "ocr_px": 295.5
+        },
+        {
+          "value": 60.0,
+          "px": 253.0,
+          "ocr_px": 250.5
+        }
+      ],
+      "rejected": [
+        "10"
+      ],
+      "repaired": [],
+      "max_resid_px": 0.21428571428566556,
+      "value_range": [
+        0.0,
+        60.0
+      ],
+      "pos": 764.0,
+      "side": "right",
+      "orient": "v",
+      "snapped": 7,
+      "snap_offset_px": 2.0,
+      "id": "R4"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#ee4c45",
+      "rgb": [
+        238,
+        76,
+        69
+      ],
+      "pixels": 698
+    },
+    {
+      "kind": "color",
+      "hex": "#4d65a4",
+      "rgb": [
+        77,
+        101,
+        164
+      ],
+      "pixels": 630
+    },
+    {
+      "kind": "color",
+      "hex": "#ffef97",
+      "rgb": [
+        255,
+        239,
+        151
+      ],
+      "pixels": 518
+    },
+    {
+      "kind": "color",
+      "hex": "#423d27",
+      "rgb": [
+        66,
+        61,
+        39
+      ],
+      "pixels": 482
+    },
+    {
+      "kind": "color",
+      "hex": "#f0966a",
+      "rgb": [
+        240,
+        150,
+        106
+      ],
+      "pixels": 452
+    },
+    {
+      "kind": "color",
+      "hex": "#75baf8",
+      "rgb": [
+        117,
+        186,
+        248
+      ],
+      "pixels": 141
+    }
+  ],
+  "labels": [
+    {
+      "text": "B.E.P.",
+      "box": [
+        625,
+        162,
+        661,
+        181
+      ]
+    }
+  ]
+}

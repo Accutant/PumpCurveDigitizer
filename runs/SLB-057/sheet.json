@@ -1,0 +1,189 @@
+{
+  "image": "sheet.png",
+  "frame": [
+    78,
+    169,
+    854,
+    577
+  ],
+  "exclude_boxes": [
+    [
+      137,
+      184,
+      169,
+      210
+    ],
+    [
+      145,
+      369,
+      201,
+      393
+    ],
+    [
+      508,
+      452,
+      564,
+      474
+    ],
+    [
+      560,
+      455,
+      596,
+      474
+    ],
+    [
+      270,
+      533,
+      307,
+      554
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        79.0,
+        0.0
+      ],
+      [
+        164.5,
+        100.0
+      ],
+      [
+        251.0,
+        200.0
+      ],
+      [
+        337.0,
+        300.0
+      ],
+      [
+        423.0,
+        400.0
+      ],
+      [
+        509.0,
+        500.0
+      ],
+      [
+        595.0,
+        600.0
+      ],
+      [
+        681.0,
+        700.0
+      ],
+      [
+        767.5,
+        800.0
+      ],
+      [
+        853.0,
+        900.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          494.5,
+          5.0
+        ],
+        [
+          413.5,
+          10.0
+        ],
+        [
+          332.5,
+          15.0
+        ],
+        [
+          251.5,
+          20.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          494.5,
+          0.5
+        ],
+        [
+          413.5,
+          1.0
+        ],
+        [
+          332.5,
+          1.5
+        ],
+        [
+          251.5,
+          2.0
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "R3",
+      "ticks": [
+        [
+          494.5,
+          10.0
+        ],
+        [
+          413.5,
+          20.0
+        ],
+        [
+          332.5,
+          30.0
+        ],
+        [
+          246.12,
+          40.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0b4783",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ed2c2d",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#000000",
+      "tol": 40,
+      "style": "solid"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "REDA",
+    "catalog_source": "REDA ESP systems",
+    "model": "AN550",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "pump_od_in": 3.38,
+    "ror_min_bpd": 400,
+    "ror_max_bpd": 700,
+    "shaft_limit_hp": 94,
+    "housing_burst_psi": 6000,
+    "notes": "Housing burst Buttress/Welded 6,000 psi (Standard N/A). High-strength shaft 150 hp not used. eff curve degree-5 fit shows elevated residual (degree 6 would meet target); flagged for user, not changed unilaterally."
+  }
+}

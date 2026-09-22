@@ -1,0 +1,237 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/SLB\\SLB-022.png",
+  "page": 0,
+  "scale_applied": 1.0,
+  "label_height_px": 10.5,
+  "dpi": 200,
+  "size": [
+    969,
+    657
+  ],
+  "frame": [
+    75,
+    259,
+    837,
+    438
+  ],
+  "axes": [
+    {
+      "a": 289.2500000000001,
+      "b": -0.5000000000000006,
+      "ticks": [
+        {
+          "value": 75.0,
+          "px": 428.5,
+          "ocr_px": 424.0
+        },
+        {
+          "value": 100.0,
+          "px": 378.5,
+          "ocr_px": 374.125
+        },
+        {
+          "value": 125.0,
+          "px": 328.5,
+          "ocr_px": 324.125
+        },
+        {
+          "value": 150.0,
+          "px": 278.5,
+          "ocr_px": 274.125
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 2.2737367544323206e-13,
+      "value_range": [
+        75.0,
+        150.0
+      ],
+      "pos": 61.625,
+      "side": "left",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 4.375,
+      "id": "L0"
+    },
+    {
+      "a": 57.85,
+      "b": -0.10000000000000006,
+      "ticks": [
+        {
+          "value": 15.0,
+          "px": 428.5,
+          "ocr_px": 424.125
+        },
+        {
+          "value": 20.0,
+          "px": 378.5,
+          "ocr_px": 374.0
+        },
+        {
+          "value": 25.0,
+          "px": 328.5,
+          "ocr_px": 324.0
+        },
+        {
+          "value": 30.0,
+          "px": 278.5,
+          "ocr_px": 274.0
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 2.2737367544323206e-13,
+      "value_range": [
+        15.0,
+        30.0
+      ],
+      "pos": 849.625,
+      "side": "right",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 4.5,
+      "id": "R1"
+    },
+    {
+      "a": 115.7,
+      "b": -0.20000000000000012,
+      "ticks": [
+        {
+          "value": 30.0,
+          "px": 428.5,
+          "ocr_px": 424.0
+        },
+        {
+          "value": 40.0,
+          "px": 378.5,
+          "ocr_px": 374.0
+        },
+        {
+          "value": 50.0,
+          "px": 328.5,
+          "ocr_px": 324.375
+        },
+        {
+          "value": 60.0,
+          "px": 278.5,
+          "ocr_px": 274.375
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 2.2737367544323206e-13,
+      "value_range": [
+        30.0,
+        60.0
+      ],
+      "pos": 931.8125,
+      "side": "right",
+      "orient": "v",
+      "snapped": 4,
+      "snap_offset_px": 4.3125,
+      "id": "R2"
+    }
+  ],
+  "colors": [
+    {
+      "kind": "color",
+      "hex": "#004483",
+      "rgb": [
+        0,
+        68,
+        131
+      ],
+      "pixels": 533
+    },
+    {
+      "kind": "color",
+      "hex": "#ffef97",
+      "rgb": [
+        255,
+        239,
+        151
+      ],
+      "pixels": 365
+    },
+    {
+      "kind": "dark",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "pixels": 345
+    },
+    {
+      "kind": "color",
+      "hex": "#417092",
+      "rgb": [
+        65,
+        112,
+        146
+      ],
+      "pixels": 258
+    },
+    {
+      "kind": "color",
+      "hex": "#649cb6",
+      "rgb": [
+        100,
+        156,
+        182
+      ],
+      "pixels": 120
+    },
+    {
+      "kind": "color",
+      "hex": "#5b2d17",
+      "rgb": [
+        91,
+        45,
+        23
+      ],
+      "pixels": 79
+    },
+    {
+      "kind": "color",
+      "hex": "#d88028",
+      "rgb": [
+        216,
+        128,
+        40
+      ],
+      "pixels": 78
+    }
+  ],
+  "labels": [
+    {
+      "text": "Operating",
+      "box": [
+        436,
+        288,
+        491,
+        310
+      ]
+    },
+    {
+      "text": "range",
+      "box": [
+        486,
+        291,
+        521,
+        310
+      ]
+    },
+    {
+      "text": "Head",
+      "box": [
+        114,
+        344,
+        146,
+        362
+      ]
+    }
+  ]
+}

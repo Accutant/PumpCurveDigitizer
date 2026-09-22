@@ -1,0 +1,152 @@
+{
+  "config": "SLB-027/sheet.json",
+  "meta": {
+    "manufacturer": "REDA",
+    "catalog_source": "REDA ESP systems",
+    "model": "H15500N",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "pump_od_in": 5.63,
+    "ror_min_bpd": 11000,
+    "ror_max_bpd": 20000,
+    "shaft_limit_hp": 637,
+    "housing_burst_psi": 3000,
+    "notes": "Housing burst: Standard 3,000 psi used (Buttress N/A, Welded 3,600 psi alt). High-strength shaft 1,019 hp not used."
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        56.57207984546854,
+        0.000127240459684358,
+        -1.5288340461710616e-07,
+        3.096325740393222e-11,
+        -2.1292553087067354e-15,
+        3.7384930628823386e-20
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "ft/stage"
+      },
+      "qa": {
+        "n_points": 746,
+        "x_min": 1.1687479949805493,
+        "x_max": 22302.888515680374,
+        "r2": 0.9991362730488579,
+        "rmse": 0.3981411870901561,
+        "max_abs_resid": 1.82320220646546,
+        "rmse_pct_span": 0.49676227083417784,
+        "max_resid_pct_span": 2.2748163155212,
+        "largest_gap_pct_range": 3.501945525291831,
+        "roundtrip_err_pct_span": 7.092374954133825e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 1.472900371485675,
+          "4": 1.3323148051147484,
+          "5": 2.274816315521191,
+          "6": 1.3661734227894717,
+          "7": 0.30695446643523655,
+          "8": 0.31018092561236466,
+          "9": 0.30608418083425437
+        },
+        "flags": []
+      }
+    },
+    "power": {
+      "coeffs": [
+        2.8621148380665162,
+        0.00014553085976027895,
+        2.49276980319414e-08,
+        7.003965420610743e-13,
+        -1.95024412413707e-16,
+        5.127695980512205e-21
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "hp/stage"
+      },
+      "qa": {
+        "n_points": 771,
+        "x_min": 1.1687479949805493,
+        "x_max": 22273.9628091075,
+        "r2": 0.9998265286815422,
+        "rmse": 0.018272681682463866,
+        "max_abs_resid": 0.047993746257732894,
+        "rmse_pct_span": 0.0456071093942426,
+        "max_resid_pct_span": 0.11978844013446432,
+        "largest_gap_pct_range": 0.12987012987013405,
+        "roundtrip_err_pct_span": 8.86728090661013e-15,
+        "degree_scan_max_resid_pct_span": {
+          "3": 1.0720826506141887,
+          "4": 0.29192087422426793,
+          "5": 0.11978844013446432,
+          "6": 0.1255242129046917,
+          "7": 0.12475891774862186,
+          "8": 0.12841083907425144,
+          "9": 0.12451280953080053
+        },
+        "flags": []
+      }
+    },
+    "eff": {
+      "coeffs": [
+        -1.0297770077302175,
+        0.0137258050322916,
+        -1.147999812592486e-06,
+        4.288596529378253e-11,
+        5.07934629967197e-16,
+        -5.797526136280349e-20
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "%"
+      },
+      "qa": {
+        "n_points": 768,
+        "x_min": 30.094454567853973,
+        "x_max": 22273.9628091075,
+        "r2": 0.9989242054856398,
+        "rmse": 0.6353310433853079,
+        "max_abs_resid": 3.323490725427778,
+        "rmse_pct_span": 0.7909455906178794,
+        "max_resid_pct_span": 4.1375285563408175,
+        "largest_gap_pct_range": 0.3901170351105375,
+        "roundtrip_err_pct_span": 1.4595557259735512e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 17.288271196032543,
+          "4": 5.614939966528998,
+          "5": 4.137528556340795,
+          "6": 2.7157983053626387,
+          "7": 0.5782090106941841,
+          "8": 0.46331967219168085,
+          "9": 0.4631996681281634
+        },
+        "flags": [
+          "rmse 0.79% of axis span",
+          "max residual 4.14% of axis span",
+          "degree 7 would meet the residual limit (0.58% of span) -- extraction looks clean, 5th-degree form is limiting"
+        ]
+      }
+    }
+  },
+  "flags": [
+    "eff: rmse 0.79% of axis span",
+    "eff: max residual 4.14% of axis span",
+    "eff: degree 7 would meet the residual limit (0.58% of span) -- extraction looks clean, 5th-degree form is limiting"
+  ],
+  "calibration_resid_px": {
+    "x": 0.5060929074060678,
+    "head": 0.42941673710873746,
+    "power": 0.4890108557397574,
+    "eff": 0.4646828338451177
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 56.57207984546854,
+    "flow_max_bpd": 23019.74710725831,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 15398.88871903223,
+    "bep_eff_pct": 73.07108442214336,
+    "bep_bhp_hp_per_stage": 7.045510274980085,
+    "hydraulic_check_max_diff_pts": 4.806594500618715,
+    "hydraulic_check_mean_diff_pts": 4.066478575166096
+  },
+  "status": "review"
+}

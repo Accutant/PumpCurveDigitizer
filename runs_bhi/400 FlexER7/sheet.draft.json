@@ -1,0 +1,333 @@
+{
+  "image": "sheet.png",
+  "frame": [
+    726,
+    152,
+    1611,
+    636
+  ],
+  "exclude_boxes": [
+    [
+      1491,
+      173,
+      1569,
+      194
+    ],
+    [
+      1549,
+      190,
+      1577,
+      211
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        726.75,
+        0.0
+      ],
+      [
+        875.5,
+        250.0
+      ],
+      [
+        1023.38,
+        500.0
+      ],
+      [
+        1171.12,
+        750.0
+      ],
+      [
+        1319.62,
+        1000.0
+      ],
+      [
+        1467.25,
+        1250.0
+      ],
+      [
+        1615.0,
+        1500.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          621.5,
+          0.0
+        ],
+        [
+          512.0,
+          10.0
+        ],
+        [
+          406.0,
+          20.0
+        ],
+        [
+          298.0,
+          30.0
+        ],
+        [
+          190.0,
+          40.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R3",
+      "ticks": [
+        [
+          622.5,
+          0.0
+        ],
+        [
+          500.62,
+          0.2
+        ],
+        [
+          379.12,
+          0.4
+        ],
+        [
+          257.62,
+          0.6
+        ],
+        [
+          136.12,
+          0.8
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "R4",
+      "ticks": [
+        [
+          621.88,
+          0.0
+        ],
+        [
+          483.0,
+          20.0
+        ],
+        [
+          343.88,
+          40.0
+        ],
+        [
+          205.75,
+          60.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0302ff",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ff0000",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#038003",
+      "tol": 35,
+      "style": "solid"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "model": null,
+    "base_frequency_hz": null,
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "catalog_version": null,
+    "series": null,
+    "pump_od_in": null,
+    "stage_type": null,
+    "construction": null,
+    "rpm": null,
+    "stages_basis": 1,
+    "ror_min_bpd": null,
+    "bep_bpd": null,
+    "ror_max_bpd": null,
+    "shaft_limit_hp": null,
+    "housing_burst_psi": null,
+    "freq_min_hz": 30,
+    "freq_max_hz": 80,
+    "freq_step_hz": 10,
+    "notes": ""
+  },
+  "_candidates": {
+    "B0": {
+      "side": "bottom",
+      "range": [
+        0.0,
+        1500.0
+      ],
+      "ticks": [
+        [
+          726.75,
+          0.0
+        ],
+        [
+          875.5,
+          250.0
+        ],
+        [
+          1023.38,
+          500.0
+        ],
+        [
+          1171.12,
+          750.0
+        ],
+        [
+          1319.62,
+          1000.0
+        ],
+        [
+          1467.25,
+          1250.0
+        ],
+        [
+          1615.0,
+          1500.0
+        ]
+      ]
+    },
+    "L1": {
+      "side": "left",
+      "range": [
+        0.0,
+        40.0
+      ],
+      "ticks": [
+        [
+          621.5,
+          0.0
+        ],
+        [
+          512.0,
+          10.0
+        ],
+        [
+          406.0,
+          20.0
+        ],
+        [
+          298.0,
+          30.0
+        ],
+        [
+          190.0,
+          40.0
+        ]
+      ]
+    },
+    "L2": {
+      "side": "left",
+      "range": [
+        1.2,
+        925.0
+      ],
+      "ticks": [
+        [
+          372.0,
+          1.2
+        ],
+        [
+          372.5,
+          1.9
+        ],
+        [
+          372.5,
+          7.0
+        ],
+        [
+          336.0,
+          925.0
+        ]
+      ]
+    },
+    "R3": {
+      "side": "right",
+      "range": [
+        0.0,
+        0.8
+      ],
+      "ticks": [
+        [
+          622.5,
+          0.0
+        ],
+        [
+          500.62,
+          0.2
+        ],
+        [
+          379.12,
+          0.4
+        ],
+        [
+          257.62,
+          0.6
+        ],
+        [
+          136.12,
+          0.8
+        ]
+      ]
+    },
+    "R4": {
+      "side": "right",
+      "range": [
+        0.0,
+        60.0
+      ],
+      "ticks": [
+        [
+          621.88,
+          0.0
+        ],
+        [
+          483.0,
+          20.0
+        ],
+        [
+          343.88,
+          40.0
+        ],
+        [
+          205.75,
+          60.0
+        ]
+      ]
+    }
+  },
+  "_colors": [
+    "#4d66aa",
+    "#278851",
+    "#dc262e",
+    "#d37070",
+    "#6bb0cb"
+  ],
+  "_todo": "Confirm roles/units against review.png: copy the right candidate ticks into y_axes.head/power/eff, set curve colours, fill meta from the sheet text, then delete the _ keys (optional).",
+  "_template": "Baker Hughes performance curve",
+  "_template_missing": []
+}

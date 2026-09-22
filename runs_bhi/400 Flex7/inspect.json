@@ -1,0 +1,151 @@
+{
+  "source": "C:/Users/Rajan/OneDrive - Accutant Solutions LLC/Accutant RC/ConsultingToolset/ESP/Dataset/Raw PumpCurveImages/BHI/400 Flex7.png",
+  "page": 0,
+  "scale_applied": 0.5888951205832866,
+  "label_height_px": 10.5,
+  "dpi": 200,
+  "size": [
+    1050,
+    790
+  ],
+  "frame": [
+    36,
+    101,
+    339,
+    227
+  ],
+  "axes": [
+    {
+      "a": 1.075714285714286,
+      "b": -0.0028571428571428597,
+      "ticks": [
+        {
+          "value": 0.4,
+          "px": 236.5
+        },
+        {
+          "value": 0.6,
+          "px": 166.5
+        },
+        {
+          "value": 0.8,
+          "px": 96.5
+        }
+      ],
+      "rejected": [],
+      "repaired": [],
+      "max_resid_px": 1.1368683772161603e-13,
+      "value_range": [
+        0.4,
+        0.8
+      ],
+      "pos": 934.75,
+      "side": "right",
+      "orient": "v",
+      "snapped": 0,
+      "id": "R0"
+    }
+  ],
+  "colors": [],
+  "labels": [
+    {
+      "text": "Series",
+      "box": [
+        38,
+        105,
+        82,
+        124
+      ]
+    },
+    {
+      "text": "OD,",
+      "box": [
+        38,
+        133,
+        67,
+        152
+      ]
+    },
+    {
+      "text": "in",
+      "box": [
+        63,
+        133,
+        80,
+        151
+      ]
+    },
+    {
+      "text": "(mm)",
+      "box": [
+        76,
+        133,
+        113,
+        152
+      ]
+    },
+    {
+      "text": "Standard",
+      "box": [
+        38,
+        160,
+        99,
+        178
+      ]
+    },
+    {
+      "text": "stage",
+      "box": [
+        95,
+        162,
+        134,
+        181
+      ]
+    },
+    {
+      "text": "alloy",
+      "box": [
+        130,
+        160,
+        165,
+        181
+      ]
+    },
+    {
+      "text": "Ni-Resist\u2122",
+      "box": [
+        228,
+        160,
+        298,
+        178
+      ]
+    },
+    {
+      "text": "Stage",
+      "box": [
+        38,
+        186,
+        79,
+        208
+      ]
+    },
+    {
+      "text": "geometry",
+      "box": [
+        74,
+        188,
+        138,
+        208
+      ]
+    },
+    {
+      "text": "Mixed-flow",
+      "box": [
+        228,
+        186,
+        301,
+        205
+      ]
+    }
+  ]
+}

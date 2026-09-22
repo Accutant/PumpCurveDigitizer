@@ -1,0 +1,202 @@
+{
+  "image": "sheet.png",
+  "frame": [
+    80,
+    174,
+    770,
+    596
+  ],
+  "exclude_boxes": [
+    [
+      417,
+      251,
+      449,
+      269
+    ],
+    [
+      201,
+      263,
+      257,
+      287
+    ],
+    [
+      347,
+      393,
+      404,
+      415
+    ],
+    [
+      400,
+      396,
+      436,
+      415
+    ],
+    [
+      265,
+      533,
+      304,
+      552
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        80.5,
+        0.0
+      ],
+      [
+        163.62,
+        250.0
+      ],
+      [
+        249.62,
+        500.0
+      ],
+      [
+        335.62,
+        750.0
+      ],
+      [
+        420.12,
+        1000.0
+      ],
+      [
+        506.12,
+        1250.0
+      ],
+      [
+        592.38,
+        1500.0
+      ],
+      [
+        678.12,
+        1750.0
+      ],
+      [
+        763.88,
+        2000.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          530.5,
+          5.0
+        ],
+        [
+          472.5,
+          10.0
+        ],
+        [
+          414.5,
+          15.0
+        ],
+        [
+          356.5,
+          20.0
+        ],
+        [
+          298.5,
+          25.0
+        ],
+        [
+          240.5,
+          30.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          472.5,
+          1.0
+        ],
+        [
+          414.5,
+          1.5
+        ],
+        [
+          356.5,
+          2.0
+        ],
+        [
+          298.5,
+          2.5
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "R3",
+      "ticks": [
+        [
+          530.5,
+          10.0
+        ],
+        [
+          472.5,
+          20.0
+        ],
+        [
+          414.5,
+          30.0
+        ],
+        [
+          356.5,
+          40.0
+        ],
+        [
+          298.5,
+          50.0
+        ],
+        [
+          240.5,
+          60.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0b4783",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ed2c2d",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#000000",
+      "tol": 40,
+      "style": "solid"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "REDA",
+    "catalog_source": "REDA ESP systems",
+    "model": "D1050N",
+    "base_frequency_hz": 60,
+    "rpm": 3500,
+    "pump_od_in": 4.0,
+    "ror_min_bpd": 300,
+    "ror_max_bpd": 1650,
+    "shaft_limit_hp": 154,
+    "housing_burst_psi": 6000,
+    "bep_bpd": 1032,
+    "notes": "400 Series, 1 stage basis, sg 1.00. BEP marked: Q=1,032 bbl/d, H=26.07 ft, P=0.30 hp, E=66.51%. Housing burst: Buttress 6,000 psi used (Standard 5,000 psi, Welded N/A). High-strength shaft 240 hp not used."
+  }
+}
