@@ -1,0 +1,39 @@
+{
+  "name": "NBV-style sheet (dashed outside ROR, dual-unit axes)",
+  "roles": {
+    "x": {
+      "axis": "bottom:0",
+      "unit": "bpd"
+    },
+    "head": {
+      "axis": "left:0",
+      "unit": "ft"
+    },
+    "eff": {
+      "axis": "left:1",
+      "unit": "%"
+    },
+    "power": {
+      "axis": "right:0",
+      "unit": "hp"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#ed282d",
+      "tol": 35,
+      "style": "dashed"
+    },
+    "power": {
+      "color": "#30b7ef",
+      "tol": 35,
+      "style": "dashed"
+    },
+    "eff": {
+      "color": "#1fac60",
+      "tol": 35,
+      "style": "dashed"
+    }
+  },
+  "meta": {}
+}

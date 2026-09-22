@@ -1,0 +1,7 @@
+{
+ "weatherford_DC550.png": "templates/weatherford_espcurves.json",
+ "baker_FLEX6.png": "templates/baker_hughes.json",
+ "nbv_160-250H.png": "templates/nbv_dashed.json",
+ "reda_SN2600.png": "templates/reda_imperial.json",
+ "reda_AN1200.png": "templates/reda_metric.json"
+}

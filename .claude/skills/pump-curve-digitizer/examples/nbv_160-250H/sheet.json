@@ -1,0 +1,196 @@
+{
+  "image": "source.png",
+  "frame": [
+    130,
+    209,
+    842,
+    804
+  ],
+  "exclude_boxes": [
+    [
+      466,
+      215,
+      569,
+      243
+    ],
+    [
+      566,
+      219,
+      629,
+      240
+    ],
+    [
+      626,
+      215,
+      673,
+      243
+    ],
+    [
+      339,
+      273,
+      385,
+      306
+    ],
+    [
+      344,
+      581,
+      371,
+      601
+    ],
+    [
+      328,
+      693,
+      381,
+      713
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        179.5,
+        0.0
+      ],
+      [
+        274.5,
+        50.0
+      ],
+      [
+        368.5,
+        100.0
+      ],
+      [
+        463.5,
+        150.0
+      ],
+      [
+        558.5,
+        200.0
+      ],
+      [
+        652.5,
+        250.0
+      ],
+      [
+        747.5,
+        300.0
+      ],
+      [
+        841.5,
+        350.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L2",
+      "ticks": [
+        [
+          803.5,
+          0.0
+        ],
+        [
+          684.5,
+          5.0
+        ],
+        [
+          566.5,
+          10.0
+        ],
+        [
+          447.5,
+          15.0
+        ],
+        [
+          328.5,
+          20.0
+        ],
+        [
+          209.5,
+          25.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R4",
+      "ticks": [
+        [
+          804.12,
+          0.0
+        ],
+        [
+          744.62,
+          0.05
+        ],
+        [
+          685.5,
+          0.1
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "L3",
+      "ticks": [
+        [
+          803.5,
+          0.0
+        ],
+        [
+          566.5,
+          25.0
+        ],
+        [
+          328.5,
+          50.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "tol": 35,
+      "style": "dashed",
+      "color": "#ed282d"
+    },
+    "power": {
+      "tol": 35,
+      "style": "dashed",
+      "color": "#30b7ef"
+    },
+    "eff": {
+      "tol": 35,
+      "style": "dashed",
+      "color": "#1fac60"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": null,
+    "model": "NBV(160-250)H",
+    "base_frequency_hz": 60,
+    "catalog_source": null,
+    "catalog_version": null,
+    "series": "319",
+    "pump_od_in": 3.19,
+    "stage_type": null,
+    "construction": null,
+    "rpm": 3490,
+    "stages_basis": 1,
+    "ror_min_bpd": 149,
+    "bep_bpd": 206,
+    "ror_max_bpd": 261,
+    "shaft_limit_hp": null,
+    "housing_burst_psi": null,
+    "freq_min_hz": 30,
+    "freq_max_hz": 80,
+    "freq_step_hz": 10,
+    "notes": "manufacturer not printed on sheet - confirm; OD 81 mm"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "image": "source.png",
+  "frame": [
+    60,
+    363,
+    889,
+    768
+  ],
+  "exclude_boxes": [
+    [
+      316,
+      361,
+      372,
+      396
+    ],
+    [
+      606,
+      360,
+      664,
+      397
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        147.0,
+        100.0
+      ],
+      [
+        229.0,
+        200.0
+      ],
+      [
+        311.0,
+        300.0
+      ],
+      [
+        393.0,
+        400.0
+      ],
+      [
+        474.0,
+        500.0
+      ],
+      [
+        638.0,
+        700.0
+      ],
+      [
+        720.0,
+        800.0
+      ],
+      [
+        802.0,
+        900.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          755.0,
+          0.0
+        ],
+        [
+          677.0,
+          5.0
+        ],
+        [
+          598.0,
+          10.0
+        ],
+        [
+          520.0,
+          15.0
+        ],
+        [
+          441.0,
+          20.0
+        ],
+        [
+          363.0,
+          25.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          755.5,
+          0.0
+        ],
+        [
+          711.5,
+          0.05
+        ],
+        [
+          668.5,
+          0.1
+        ],
+        [
+          624.5,
+          0.15
+        ],
+        [
+          580.5,
+          0.2
+        ],
+        [
+          537.5,
+          0.25
+        ],
+        [
+          493.5,
+          0.3
+        ],
+        [
+          450.5,
+          0.35
+        ],
+        [
+          406.5,
+          0.4
+        ],
+        [
+          362.5,
+          0.45
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "R3",
+      "ticks": [
+        [
+          685.5,
+          20.0
+        ],
+        [
+          604.5,
+          40.0
+        ],
+        [
+          523.5,
+          60.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#0000ff"
+    },
+    "power": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#ff0000"
+    },
+    "eff": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#008000"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "Centrilift",
+    "model": "DC550",
+    "base_frequency_hz": 60,
+    "catalog_source": "Weatherford ESP Curves Version 5.2",
+    "catalog_version": null,
+    "series": "338",
+    "pump_od_in": null,
+    "stage_type": null,
+    "construction": null,
+    "rpm": 3500,
+    "stages_basis": 1,
+    "ror_min_bpd": 340,
+    "bep_bpd": 552,
+    "ror_max_bpd": 696,
+    "shaft_limit_hp": 85,
+    "housing_burst_psi": 5200,
+    "freq_min_hz": 30,
+    "freq_max_hz": 80,
+    "freq_step_hz": 10,
+    "notes": "shaft limit = Std Monel (HS Inconel 111 hp); burst = buttress (V-thread 4310 psi); casing 4.5 in"
+  }
+}

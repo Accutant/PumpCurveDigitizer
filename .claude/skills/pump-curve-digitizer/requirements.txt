@@ -1,0 +1,6 @@
+opencv-python-headless>=4.8
+numpy>=1.24
+pymupdf>=1.23
+pytesseract>=0.3.10
+matplotlib>=3.7
+# plus the Tesseract OCR binary (Windows: UB Mannheim installer; set TESSERACT_CMD if not on PATH)

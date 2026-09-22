@@ -1,0 +1,163 @@
+{
+  "config": "pcd_regression\\dpi150\\sheet.json",
+  "meta": {
+    "manufacturer": "TEST",
+    "model": "T2500",
+    "base_frequency_hz": 60,
+    "catalog_source": null,
+    "catalog_version": null,
+    "series": null,
+    "pump_od_in": null,
+    "stage_type": null,
+    "construction": null,
+    "rpm": null,
+    "stages_basis": 1,
+    "ror_min_bpd": null,
+    "bep_bpd": null,
+    "ror_max_bpd": null,
+    "shaft_limit_hp": null,
+    "housing_burst_psi": null,
+    "freq_min_hz": 30,
+    "freq_max_hz": 80,
+    "freq_step_hz": 10,
+    "notes": ""
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        55.71271720807473,
+        -0.012857920179149059,
+        2.588928250389076e-05,
+        -1.8173253469916132e-08,
+        4.71391766381878e-12,
+        -4.4321815523175177e-16
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "ft/stage"
+      },
+      "qa": {
+        "n_points": 272,
+        "x_min": 4.21701045492955,
+        "x_max": 3503.730319299236,
+        "r2": 0.9999890555999822,
+        "rmse": 0.037500841030847235,
+        "max_abs_resid": 0.13805747732790508,
+        "rmse_pct_span": 0.04962796117667438,
+        "max_resid_pct_span": 0.18270286576621037,
+        "largest_gap_pct_range": 45.34412955465588,
+        "roundtrip_err_pct_span": 1.0813678916431123e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 2.106953209641137,
+          "4": 0.8586279617119233,
+          "5": 0.18270286576622918,
+          "6": 0.18555367582322393,
+          "7": 0.1880273432262297,
+          "8": 0.19139388059254306,
+          "9": 0.17066158673224147
+        },
+        "flags": [
+          "gap of 45% of flow range in extracted points"
+        ]
+      }
+    },
+    "power": {
+      "coeffs": [
+        0.6210365401589832,
+        0.00018808361916906023,
+        1.1385505152207647e-07,
+        -3.199400813469776e-11,
+        2.9310485504990653e-16,
+        2.9559024437689397e-23
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "hp/stage"
+      },
+      "qa": {
+        "n_points": 260,
+        "x_min": 4.21701045492955,
+        "x_max": 3503.730319299236,
+        "r2": 0.9999956006416478,
+        "rmse": 0.0006647554068890619,
+        "max_abs_resid": 0.0032532886051167553,
+        "rmse_pct_span": 0.04398704586259515,
+        "max_resid_pct_span": 0.2152709907952816,
+        "largest_gap_pct_range": 47.77327935222672,
+        "roundtrip_err_pct_span": 1.4692751828958287e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.23084696658813564,
+          "4": 0.2152692709142424,
+          "5": 0.2152709907952743,
+          "6": 0.20077113173176728,
+          "7": 0.20542397438999266,
+          "8": 0.18710132469985952,
+          "9": 0.18817612801001865
+        },
+        "flags": [
+          "gap of 48% of flow range in extracted points"
+        ]
+      }
+    },
+    "eff": {
+      "coeffs": [
+        0.4413996260648574,
+        0.06105919347677778,
+        -1.5542245943859687e-05,
+        -1.7244569511860059e-09,
+        1.1374167560485399e-12,
+        -1.4413930400561392e-16
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "%"
+      },
+      "qa": {
+        "n_points": 205,
+        "x_min": 4.21701045492955,
+        "x_max": 3503.730319299236,
+        "r2": 0.9999712443871371,
+        "rmse": 0.08397245723218985,
+        "max_abs_resid": 0.2675702937771738,
+        "rmse_pct_span": 0.1111276902830282,
+        "max_resid_pct_span": 0.3540978758498243,
+        "largest_gap_pct_range": 58.90688259109312,
+        "roundtrip_err_pct_span": 4.701599528883097e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.3231764143901389,
+          "4": 0.3091060424972813,
+          "5": 0.35409787584982716,
+          "6": 0.19038620855940605,
+          "7": 0.2050903670317682,
+          "8": 0.2054300025263902,
+          "9": 0.19978438223270145
+        },
+        "flags": [
+          "gap of 59% of flow range in extracted points"
+        ]
+      }
+    }
+  },
+  "flags": [
+    "head: gap of 45% of flow range in extracted points",
+    "power: gap of 48% of flow range in extracted points",
+    "eff: gap of 59% of flow range in extracted points"
+  ],
+  "calibration_resid_px": {
+    "x": 0.47341885251143706,
+    "head": 0.48243020550591387,
+    "power": 0.4951618750174598,
+    "eff": 0.48243020550591387
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 55.71271720807473,
+    "flow_max_bpd": 3503.730319299236,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 2156.955880111592,
+    "bep_eff_pct": 60.41876478808956,
+    "bep_bhp_hp_per_stage": 1.2417116641067925,
+    "hydraulic_check_max_diff_pts": 0.6189815612509051,
+    "hydraulic_check_mean_diff_pts": 0.1401552768363875
+  },
+  "status": "review"
+}

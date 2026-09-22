@@ -1,0 +1,226 @@
+{
+  "image": "source.png",
+  "frame": [
+    75,
+    186,
+    757,
+    553
+  ],
+  "exclude_boxes": [
+    [
+      201,
+      227,
+      231,
+      244
+    ],
+    [
+      148,
+      343,
+      197,
+      363
+    ],
+    [
+      241,
+      432,
+      276,
+      449
+    ],
+    [
+      490,
+      468,
+      540,
+      489
+    ],
+    [
+      535,
+      471,
+      568,
+      489
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        76.25,
+        0.0
+      ],
+      [
+        161.38,
+        500.0
+      ],
+      [
+        246.88,
+        1000.0
+      ],
+      [
+        332.0,
+        1500.0
+      ],
+      [
+        416.5,
+        2000.0
+      ],
+      [
+        501.75,
+        2500.0
+      ],
+      [
+        587.0,
+        3000.0
+      ],
+      [
+        672.0,
+        3500.0
+      ],
+      [
+        757.12,
+        4000.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          552.5,
+          0.0
+        ],
+        [
+          501.5,
+          10.0
+        ],
+        [
+          450.5,
+          20.0
+        ],
+        [
+          399.5,
+          30.0
+        ],
+        [
+          348.5,
+          40.0
+        ],
+        [
+          297.5,
+          50.0
+        ],
+        [
+          246.5,
+          60.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          501.5,
+          0.5
+        ],
+        [
+          450.5,
+          1.0
+        ],
+        [
+          399.5,
+          1.5
+        ],
+        [
+          348.5,
+          2.0
+        ],
+        [
+          297.5,
+          2.5
+        ],
+        [
+          246.5,
+          3.0
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "R3",
+      "ticks": [
+        [
+          552.5,
+          0.0
+        ],
+        [
+          501.5,
+          10.0
+        ],
+        [
+          450.5,
+          20.0
+        ],
+        [
+          399.5,
+          30.0
+        ],
+        [
+          348.5,
+          40.0
+        ],
+        [
+          297.5,
+          50.0
+        ],
+        [
+          246.5,
+          60.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#0b4783"
+    },
+    "power": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#ed2c2d"
+    },
+    "eff": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#000000"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "REDA",
+    "model": "SN2600",
+    "base_frequency_hz": 60,
+    "catalog_source": "REDA ESP systems",
+    "catalog_version": null,
+    "series": null,
+    "pump_od_in": 5.38,
+    "stage_type": null,
+    "construction": null,
+    "rpm": 3500,
+    "stages_basis": 1,
+    "ror_min_bpd": 1600,
+    "bep_bpd": null,
+    "ror_max_bpd": 3200,
+    "shaft_limit_hp": 256,
+    "housing_burst_psi": 6000,
+    "freq_min_hz": 30,
+    "freq_max_hz": 80,
+    "freq_step_hz": 10,
+    "notes": "shaft limit standard (HS 410 hp); burst buttress/welded; min casing 7.000 in"
+  }
+}

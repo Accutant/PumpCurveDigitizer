@@ -1,0 +1,41 @@
+{
+  "name": "Weatherford ESP Curves v5.2 (Centrilift etc.)",
+  "roles": {
+    "x": {
+      "axis": "bottom:0",
+      "unit": "bpd"
+    },
+    "head": {
+      "axis": "left:0",
+      "unit": "ft"
+    },
+    "power": {
+      "axis": "right:0",
+      "unit": "hp"
+    },
+    "eff": {
+      "axis": "right:1",
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0000ff",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ff0000",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#008000",
+      "tol": 35,
+      "style": "solid"
+    }
+  },
+  "meta": {
+    "catalog_source": "Weatherford ESP Curves Version 5.2"
+  }
+}

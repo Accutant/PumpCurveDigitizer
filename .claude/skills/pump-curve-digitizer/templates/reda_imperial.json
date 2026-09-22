@@ -1,0 +1,42 @@
+{
+  "name": "REDA ESP systems (bbl/d, ft)",
+  "roles": {
+    "x": {
+      "axis": "bottom:0",
+      "unit": "bpd"
+    },
+    "head": {
+      "axis": "left:0",
+      "unit": "ft"
+    },
+    "power": {
+      "axis": "right:0",
+      "unit": "hp"
+    },
+    "eff": {
+      "axis": "right:1",
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "color": "#0b4783",
+      "tol": 35,
+      "style": "solid"
+    },
+    "power": {
+      "color": "#ed2c2d",
+      "tol": 35,
+      "style": "solid"
+    },
+    "eff": {
+      "color": "#000000",
+      "tol": 40,
+      "style": "solid"
+    }
+  },
+  "meta": {
+    "manufacturer": "REDA",
+    "catalog_source": "REDA ESP systems"
+  }
+}

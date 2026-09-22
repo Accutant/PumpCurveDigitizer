@@ -1,0 +1,200 @@
+{
+  "image": "source.png",
+  "frame": [
+    70,
+    124,
+    939,
+    611
+  ],
+  "exclude_boxes": [
+    [
+      457,
+      125,
+      502,
+      145
+    ],
+    [
+      499,
+      125,
+      524,
+      145
+    ],
+    [
+      509,
+      146,
+      538,
+      162
+    ],
+    [
+      532,
+      146,
+      570,
+      164
+    ]
+  ],
+  "x_axis": {
+    "ocr_id": "B0",
+    "ticks": [
+      [
+        154.5,
+        100.0
+      ],
+      [
+        232.5,
+        200.0
+      ],
+      [
+        311.5,
+        300.0
+      ],
+      [
+        389.5,
+        400.0
+      ],
+      [
+        468.5,
+        500.0
+      ],
+      [
+        545.62,
+        600.0
+      ],
+      [
+        624.5,
+        700.0
+      ],
+      [
+        703.5,
+        800.0
+      ],
+      [
+        781.5,
+        900.0
+      ],
+      [
+        860.5,
+        1000.0
+      ]
+    ],
+    "unit": "bpd"
+  },
+  "y_axes": {
+    "head": {
+      "ocr_id": "L1",
+      "ticks": [
+        [
+          524.5,
+          5.0
+        ],
+        [
+          444.5,
+          10.0
+        ],
+        [
+          364.5,
+          15.0
+        ],
+        [
+          284.5,
+          20.0
+        ],
+        [
+          204.5,
+          25.0
+        ]
+      ],
+      "unit": "ft"
+    },
+    "power": {
+      "ocr_id": "R2",
+      "ticks": [
+        [
+          524.5,
+          0.1
+        ],
+        [
+          444.5,
+          0.2
+        ],
+        [
+          364.5,
+          0.3
+        ],
+        [
+          284.5,
+          0.4
+        ]
+      ],
+      "unit": "hp"
+    },
+    "eff": {
+      "ocr_id": "R3",
+      "ticks": [
+        [
+          524.5,
+          10.0
+        ],
+        [
+          444.5,
+          20.0
+        ],
+        [
+          364.5,
+          30.0
+        ],
+        [
+          284.5,
+          40.0
+        ],
+        [
+          204.5,
+          50.0
+        ]
+      ],
+      "unit": "%"
+    }
+  },
+  "curves": {
+    "head": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#0302ff"
+    },
+    "power": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#ff0000"
+    },
+    "eff": {
+      "tol": 35,
+      "style": "solid",
+      "color": "#038003"
+    }
+  },
+  "fit": {
+    "degree": 5,
+    "sg": 1.0
+  },
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "model": "FLEX6",
+    "base_frequency_hz": 60,
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "catalog_version": null,
+    "series": "338",
+    "pump_od_in": null,
+    "stage_type": null,
+    "construction": null,
+    "rpm": 3500,
+    "stages_basis": 1,
+    "ror_min_bpd": 480,
+    "bep_bpd": 600,
+    "ror_max_bpd": 720,
+    "shaft_limit_hp": null,
+    "housing_burst_psi": null,
+    "freq_min_hz": 30,
+    "freq_max_hz": 80,
+    "freq_step_hz": 10,
+    "notes": "ROR = Allowed Operational Range band"
+  }
+}

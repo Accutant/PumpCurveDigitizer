@@ -1,0 +1,159 @@
+{
+  "config": "runs/baker_FLEX6/sheet.json",
+  "meta": {
+    "manufacturer": "Baker Hughes",
+    "model": "FLEX6",
+    "base_frequency_hz": 60,
+    "catalog_source": "Baker Hughes ESP performance curve",
+    "catalog_version": null,
+    "series": "338",
+    "pump_od_in": null,
+    "stage_type": null,
+    "construction": null,
+    "rpm": 3500,
+    "stages_basis": 1,
+    "ror_min_bpd": 480,
+    "bep_bpd": 600,
+    "ror_max_bpd": 720,
+    "shaft_limit_hp": null,
+    "housing_burst_psi": null,
+    "freq_min_hz": 30,
+    "freq_max_hz": 80,
+    "freq_step_hz": 10,
+    "notes": "ROR = Allowed Operational Range band"
+  },
+  "curves": {
+    "head": {
+      "coeffs": [
+        25.199467885248332,
+        -0.013652950075010495,
+        -7.393445429064698e-05,
+        2.910471211874032e-07,
+        -3.946010878789747e-10,
+        1.6554720338351162e-13
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "ft/stage"
+      },
+      "qa": {
+        "n_points": 772,
+        "x_min": 0.11890916636761517,
+        "x_max": 987.1228986314833,
+        "r2": 0.9999951392531552,
+        "rmse": 0.01472101068806335,
+        "max_abs_resid": 0.06545651179224876,
+        "rmse_pct_span": 0.04836471683963318,
+        "max_resid_pct_span": 0.21505219479999588,
+        "largest_gap_pct_range": 0.5167958656330707,
+        "roundtrip_err_pct_span": 1.575741590597347e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 2.561119951279367,
+          "4": 2.126578257338673,
+          "5": 0.2150521948000134,
+          "6": 0.21345269814090154,
+          "7": 0.21323993622197143,
+          "8": 0.21759316604482157,
+          "9": 0.21639716021321695
+        },
+        "flags": []
+      }
+    },
+    "power": {
+      "coeffs": [
+        0.12075425270184247,
+        5.190863389567547e-05,
+        -4.2649796437110116e-07,
+        1.4627488523132687e-09,
+        -1.8997375937189874e-12,
+        8.265960053946469e-16
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "hp/stage"
+      },
+      "qa": {
+        "n_points": 790,
+        "x_min": 0.11890916636761517,
+        "x_max": 1012.6268776874296,
+        "r2": 0.9949432434439369,
+        "rmse": 0.0002934793085210634,
+        "max_abs_resid": 0.0018139877567375229,
+        "rmse_pct_span": 0.04821015335048267,
+        "max_resid_pct_span": 0.2979856684579092,
+        "largest_gap_pct_range": 0.5037783375314876,
+        "roundtrip_err_pct_span": 2.2797187363966244e-14,
+        "degree_scan_max_resid_pct_span": {
+          "3": 0.7363418873346043,
+          "4": 0.5832261544629646,
+          "5": 0.29798566845792285,
+          "6": 0.2571122441603664,
+          "7": 0.22614594270694446,
+          "8": 0.20328325535896982,
+          "9": 0.1555142483632847
+        },
+        "flags": []
+      }
+    },
+    "eff": {
+      "coeffs": [
+        -0.6944943824156624,
+        0.1803717663285469,
+        -0.0003757861031600672,
+        7.937073912368184e-07,
+        -9.026406419669348e-10,
+        3.0060178522477947e-13
+      ],
+      "units": {
+        "x": "bpd",
+        "y": "%"
+      },
+      "qa": {
+        "n_points": 777,
+        "x_min": 0.11890916636761517,
+        "x_max": 989.673296537078,
+        "r2": 0.9995720195143338,
+        "rmse": 0.31132846399002406,
+        "max_abs_resid": 1.59757691816906,
+        "rmse_pct_span": 0.5114225281150292,
+        "max_resid_pct_span": 2.624356333747942,
+        "largest_gap_pct_range": 0.12886597938145083,
+        "roundtrip_err_pct_span": 1.575741590597347e-13,
+        "degree_scan_max_resid_pct_span": {
+          "3": 4.079372263675348,
+          "4": 4.459808015496175,
+          "5": 2.624356333747955,
+          "6": 0.9454265774641266,
+          "7": 0.3105740147349501,
+          "8": 0.15554959738939333,
+          "9": 0.1458433470007442
+        },
+        "flags": [
+          "max residual 2.62% of axis span",
+          "degree 6 would meet the residual limit (0.95% of span) -- extraction looks clean, 5th-degree form is limiting"
+        ]
+      }
+    }
+  },
+  "flags": [
+    "eff: max residual 2.62% of axis span",
+    "eff: degree 6 would meet the residual limit (0.95% of span) -- extraction looks clean, 5th-degree form is limiting"
+  ],
+  "calibration_resid_px": {
+    "x": 0.8015679582537223,
+    "head": 5.6843418860808e-14,
+    "power": 4.440892098500624e-14,
+    "eff": 5.6843418860808e-14
+  },
+  "derived": {
+    "shutoff_head_ft_per_stage": 25.199467885248332,
+    "flow_max_bpd": 990.3379470341405,
+    "flow_min_bpd": 0.0,
+    "bep_bpd_fit": 603.1556788643975,
+    "bep_eff_pct": 50.08132091060706,
+    "bep_bhp_hp_per_stage": 0.13242754047114508,
+    "hydraulic_check_max_diff_pts": 0.5448936526113712,
+    "hydraulic_check_mean_diff_pts": 0.1139915251808994
+  },
+  "status": "review"
+}
