@@ -12,8 +12,14 @@ tests/regression.py   synthetic vector PDF with known curves at 100-300 dpi -> P
 ```
 
 ## Install
-`pip install -r requirements.txt`, plus the Tesseract binary. On Windows, if `tesseract.exe` isn't on
-PATH: `set TESSERACT_CMD=C:\Program Files\Tesseract-OCR\tesseract.exe`.
+Recommended (own conda env, includes Tesseract):
+```
+conda env create -f environment.yml
+conda activate pumpdig
+python tests\regression.py        # must print PASS
+```
+Without conda: `pip install -r requirements.txt` in a venv, plus the Tesseract binary
+(`winget install UB-Mannheim.TesseractOCR`; set `TESSERACT_CMD` if it isn't on PATH).
 
 ## How the automation works (and where it can go wrong)
 1. **Frame.** The plot is where gridlines are dense in both directions. Check the magenta box in review.png.

@@ -29,7 +29,7 @@ import cv2
 import numpy as np
 from numpy.polynomial import Polynomial
 
-from common import load_json, save_json, line_mask
+from common import load_json, save_json, line_mask, detect_lines
 
 # conversions to catalogue units
 FLOW = {"bpd": 1.0, "bbl/d": 1.0, "m3d": 6.289811, "m3/d": 6.289811}
@@ -41,15 +41,37 @@ HYD_CONST = 135770.0          # Q[bpd] * H[ft] * SG / 135770 = hydraulic hp
 
 # QA thresholds (fraction of the y-axis span unless stated)
 QA = {"rmse_frac": 0.006, "max_resid_frac": 0.025, "max_gap_frac": 0.12,
-      "min_points": 40, "hyd_eff_pts": 5.0}
+      "min_points": 40,
+      # hydraulic cross-check: flag above hyd_eff_pts, hard-reject above hyd_reject_pts
+      "hyd_eff_pts": 5.0, "hyd_reject_pts": 10.0,
+      # printed-BEP cross-check (meta.bep_head_ft / bep_bhp_hp / bep_eff_pct)
+      "bep_box_pct": 3.0, "bep_box_reject_pct": 10.0,
+      # physically impossible results -> reject
+      "eff_min_pct": 20.0, "eff_max_pct": 90.0,
+      # rpm implies the supply frequency: a 2-pole motor turns ~58.3 rpm per Hz
+      "rpm_per_hz": 58.33, "rpm_hz_tol_pct": 10.0}
 
 
 # ----------------------------------------------------------------------------- calibration
-def axis_map(spec):
-    """Least-squares linear pixel->value map from >= 2 [px, value] ticks."""
+def axis_map(spec, name="axis"):
+    """Least-squares linear pixel->value map from >= 2 [px, value] ticks.
+
+    Validated: hand-entered ticks are a known source of silent, catastrophic errors
+    (two values on one pixel, or a flow value pasted into a power axis). Those produce
+    a plausible-looking fit and wrong-but-smooth coefficients, so they are refused here.
+    """
     t = np.asarray(spec["ticks"], float)
     if len(t) < 2:
-        raise ValueError(f"axis needs >= 2 ticks: {spec}")
+        raise ValueError(f"{name}: needs >= 2 ticks, got {len(t)}")
+    order = np.argsort(t[:, 0])
+    t = t[order]
+    dpx, dval = np.diff(t[:, 0]), np.diff(t[:, 1])
+    if np.any(np.abs(dpx) < 0.5):
+        raise ValueError(f"{name}: two ticks share a pixel position -- {spec['ticks']}")
+    if np.any(dval == 0):
+        raise ValueError(f"{name}: repeated tick value -- {spec['ticks']}")
+    if not (np.all(dval > 0) or np.all(dval < 0)):
+        raise ValueError(f"{name}: tick values are not monotonic in pixel order -- {spec['ticks']}")
     b, a = np.polyfit(t[:, 0], t[:, 1], 1)
     resid = t[:, 1] - (a + b * t[:, 0])
     return (lambda p: a + b * np.asarray(p, float)), (lambda v: (np.asarray(v, float) - a) / b), \
@@ -85,7 +107,19 @@ def curve_mask(img, frame, excl, spec):
         kh = max(25, int(0.25 * fw))
         hor = cv2.morphologyEx(m, cv2.MORPH_OPEN, np.ones((1, kh), np.uint8))
         m[cv2.dilate(hor, np.ones((3, 1), np.uint8)) > 0] = 0
-        # also drop the gray grid (lighter lines the black mask may have caught)
+        # A dark curve shares its colour with the grid. Morphology only removes grid lines
+        # that stay unbroken; on sheets where the grid is chopped up (shaded bands, crossings)
+        # the leftovers are indistinguishable from curve pixels and the tracker can follow a
+        # grid line instead of the curve. So erase the grid where it was actually detected.
+        lines = detect_lines(sub, min_frac=0.3)
+        for L in lines["h"]:                      # erase a grid line only where the mask really
+            r = int(round(L["pos"]))              # runs the width of the plot: a curve touches a
+            if m[r, :].mean() > 0.5:              # row only over a limited span, a grid line does not
+                m[r, :] = 0
+        for L in lines["v"]:
+            c_ = int(round(L["pos"]))
+            if m[:, c_].mean() > 0.5:
+                m[:, c_] = 0
         m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
     for bx0, by0, bx1, by1 in excl:
         m[max(0, by0 - y0):max(0, by1 - y0 + 1), max(0, bx0 - x0):max(0, bx1 - x0 + 1)] = 0
@@ -238,6 +272,87 @@ def derived_fields(res, sg):
     return d, flags
 
 
+def bep_box_check(res, meta):
+    """Cross-check the fits against a BEP box printed on the sheet (REDA prints Q/H/P/E).
+
+    Set meta.bep_bpd plus any of bep_head_ft, bep_bhp_hp, bep_eff_pct from the sheet and the
+    fitted curves are compared there. This is independent of every pixel step, so it catches
+    a mis-scaled or mis-read axis that the fit statistics cannot see.
+    """
+    q = meta.get("bep_bpd")
+    printed = {"head": meta.get("bep_head_ft"), "power": meta.get("bep_bhp_hp"),
+               "eff": meta.get("bep_eff_pct")}
+    if not q or not any(v for v in printed.values()):
+        return {}, []
+    out, flags = {}, []
+    for name, want in printed.items():
+        cv = res["curves"].get(name, {})
+        if not want or not cv.get("coeffs"):
+            continue
+        got = float(peval(np.array(cv["coeffs"]), float(q)))
+        err = 100 * (got - float(want)) / float(want) if want else float("nan")
+        out[f"bep_{name}_err_pct"] = err
+        if abs(err) > QA["bep_box_pct"]:
+            flags.append(f"printed BEP {name} is {want:g}, fit gives {got:.4g} ({err:+.1f}%)")
+    return out, flags
+
+
+def frequency_check(cfg):
+    """Frequency vs units and rpm.
+
+    Metric sheets (m3/d, m, kW) are usually 50 Hz and imperial ones 60 Hz, and a metric sheet
+    filed as 60 Hz is a silent error: the coefficients are fine but every affinity-law
+    correction downstream is wrong. rpm settles it -- ~3500 rpm is 60 Hz, ~2917 rpm is 50 Hz.
+    """
+    meta = cfg.get("meta", {})
+    hz, rpm = meta.get("base_frequency_hz"), meta.get("rpm")
+    units = [cfg.get("x_axis", {}).get("unit", "")] + \
+            [v.get("unit", "") for v in cfg.get("y_axes", {}).values()]
+    metric = any(str(u).lower() in ("m3d", "m3/d", "m", "kw") for u in units)
+    flags = []
+    if hz is None:
+        flags.append("base_frequency_hz not set -- read it from the sheet, do not assume 60 Hz")
+    if metric and hz == 60:
+        flags.append("metric axes (m3/d, m or kW) with base_frequency_hz = 60: metric sheets are "
+                     "usually 50 Hz -- confirm against the sheet's stated Hz/rpm")
+    if hz and rpm:
+        implied = float(rpm) / QA["rpm_per_hz"]
+        if abs(implied - float(hz)) > QA["rpm_hz_tol_pct"] / 100 * float(hz):
+            flags.append(f"{rpm:g} rpm implies {implied:.0f} Hz but base_frequency_hz is {hz:g}")
+    return flags
+
+
+def hard_failures(res, d, meta):
+    """Errors no human sign-off should be able to wave through (status 'reject').
+
+    Each of these was observed producing a wrong catalogue row that looked fine in the
+    overlay and had R2 > 0.999.
+    """
+    bad = []
+    hyd = d.get("hydraulic_check_max_diff_pts")
+    if hyd is not None and hyd > QA["hyd_reject_pts"]:
+        bad.append(f"hydraulic check off by {hyd:.0f} pts (limit {QA['hyd_reject_pts']:.0f})")
+    cur = {k: v for k, v in res["curves"].items() if v.get("coeffs")}
+    qmax = d.get("flow_max_bpd")
+    if qmax and "power" in cur:
+        xs = np.linspace(0.2 * qmax, 0.9 * qmax, 60)
+        pw = peval(np.array(cur["power"]["coeffs"]), xs)
+        if pw.min() <= 0:
+            bad.append(f"power curve reaches {pw.min():.3g} hp/stage inside the operating range")
+    if "eff" in cur:
+        e = d.get("bep_eff_pct")
+        if e is not None and not (QA["eff_min_pct"] <= e <= QA["eff_max_pct"]):
+            bad.append(f"peak efficiency {e:.1f}% outside {QA['eff_min_pct']:g}-{QA['eff_max_pct']:g}%")
+    lo, hi = meta.get("ror_min_bpd"), meta.get("ror_max_bpd")
+    bep = meta.get("bep_bpd") or d.get("bep_bpd_fit")
+    if lo and hi and bep and not (float(lo) * 0.95 <= float(bep) <= float(hi) * 1.05):
+        bad.append(f"BEP {float(bep):.0f} bpd falls outside the sheet's ROR {lo:g}-{hi:g} bpd")
+    for name, err in ((k, v) for k, v in d.items() if k.endswith("_err_pct")):
+        if abs(err) > QA["bep_box_reject_pct"]:
+            bad.append(f"{name.replace('_err_pct','').replace('bep_','printed BEP ')} off by {err:+.0f}%")
+    return bad
+
+
 # ----------------------------------------------------------------------------- outputs
 COLORS_BGR = {"head": (200, 0, 0), "power": (0, 0, 200), "eff": (0, 140, 0)}
 
@@ -301,18 +416,19 @@ def run(cfg_path, out=None):
     deg = cfg.get("fit", {}).get("degree", 5)
     sg = cfg.get("fit", {}).get("sg", 1.0)
 
-    xf, xinv, xres = axis_map(cfg["x_axis"])
+    xf, xinv, xres = axis_map(cfg["x_axis"], "x_axis")
     xk = FLOW[cfg["x_axis"].get("unit", "bpd").lower()]
     res = {"config": str(cfg_path), "meta": cfg.get("meta", {}), "curves": {}, "flags": [],
            "calibration_resid_px": {"x": xres}}
     curves_px, fits_px, data = {}, {}, {}
     for name, spec in cfg["curves"].items():
         yspec = cfg["y_axes"][spec.get("axis", name)]
-        yf, yinv, yres = axis_map(yspec)
+        yf, yinv, yres = axis_map(yspec, f"y_axes.{spec.get('axis', name)}")
         res["calibration_resid_px"][name] = yres
         yk = UNITS[name][yspec.get("unit").lower()]
         m = curve_mask(img, frame, excl, spec)
-        cands = column_candidates(m, max_run=spec.get("max_run", int(0.3 * (y1 - y0))))
+        max_run = spec.get("max_run", int(0.3 * (y1 - y0)))
+        cands = column_candidates(m, max_run=max_run)
         px, py = robust_track(cands)
         if len(px) < 10:
             res["curves"][name] = {"coeffs": None, "qa": {"flags": ["curve not found"]}}
@@ -338,11 +454,15 @@ def run(cfg_path, out=None):
         np.savetxt(out / f"points_{name}.csv", np.stack([x, y], 1), delimiter=",",
                    header=f"flow_bpd,{name}", comments="", fmt="%.6g")
     d, flags = derived_fields(res, sg)
+    bep_err, bep_flags = bep_box_check(res, cfg.get("meta", {}))
+    d.update(bep_err)
     res["derived"] = d
-    res["flags"] += flags
+    res["flags"] += flags + bep_flags + frequency_check(cfg)
     if max(res["calibration_resid_px"].values()) > 3:
         res["flags"].append("axis calibration residual > 3 px: check tick assignments")
-    res["status"] = "review" if res["flags"] else "ok"
+    res["hard_failures"] = hard_failures(res, d, cfg.get("meta", {}))
+    res["flags"] += [f"REJECT: {b}" for b in res["hard_failures"]]
+    res["status"] = "reject" if res["hard_failures"] else ("review" if res["flags"] else "ok")
     draw_overlay(img, frame, curves_px, fits_px, out / "overlay.png")
     fit_plot(res, data, out / "fit_plot.png", sg)
     save_json(res, out / "results.json")
@@ -366,6 +486,9 @@ def main():
         print(f"  {k} = {v:.4g}")
     for f in r["flags"]:
         print("  FLAG:", f)
+    if r.get("hard_failures"):
+        print("  -> status REJECT: not writable to the catalogue. Fix the sheet.json "
+              "(axis ticks/units) and re-run; --accept-review cannot override this.")
 
 
 if __name__ == "__main__":

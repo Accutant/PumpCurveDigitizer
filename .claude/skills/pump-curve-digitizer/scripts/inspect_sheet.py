@@ -241,6 +241,109 @@ def snap_to_grid(fit, lines, frame, max_off=5.0, min_share=0.7, max_spread=3.0):
     return fit
 
 
+def detect_frequency(img, frame):
+    """Read the sheet's stated frequency and rpm from the header text.
+
+    Sheets print e.g. "60 Hz / 3,500 rpm" or "50 Hz / 2,917 rpm". Both are reported so they
+    can be cross-checked: a 2-pole motor turns ~58.3 rpm per Hz on either supply, so the rpm
+    confirms the frequency independently of the text.
+    """
+    strips = [img[:max(20, frame[1]), :], img[frame[3]:, :]]   # header AND footer: Baker Hughes
+    txt = ""                                                   # prints "RPM=3500" under the plot
+    for st in strips:
+        if st.shape[0] < 10:
+            continue
+        g = cv2.resize(cv2.cvtColor(st, cv2.COLOR_BGR2GRAY), None, fx=3, fy=3,
+                       interpolation=cv2.INTER_CUBIC)
+        txt += " ".join(pytesseract.image_to_string(g, config=f"--psm {m}") for m in (6, 11))
+    txt = txt.replace(",", "")
+    hz = sorted({int(v) for v in re.findall(r"(\d{2})\s*[Hh][ZzEe]", txt) if 40 <= int(v) <= 70})
+    rpm = {int(v) for v in re.findall(r"(\d{3,5})\s*[rR][pP][mM]", txt) if 500 <= int(v) <= 7000}
+    rpm |= {int(v) for v in re.findall(r"[rR][pP][mM]\s*[=:]?\s*(\d{3,5})", txt) if 500 <= int(v) <= 7000}
+    rpm = sorted(rpm)
+    return {"hz_text": hz, "rpm_text": rpm,
+            # a 2-pole motor turns ~58.3 rpm per Hz, so rpm implies the supply frequency
+            "hz_from_rpm": [int(round(r / 58.33 / 10.0) * 10) for r in rpm]}
+
+
+def detect_ror_bands(img, frame, min_width=0.04, tol=14):
+    """Shaded operating-range bands inside the plot, as pixel column spans.
+
+    Vendors mark the recommended operating range with a shaded rectangle spanning the plot
+    height (REDA/NBV yellow, Baker Hughes grey). Curves and grid lines are thin, so the
+    per-column median colour IS the background: a band is a run of columns whose median
+    differs from the plot's overall background. Nested bands (Baker prints "Allowed
+    Operational Range" and a narrower "Test Range") come back as separate entries.
+    """
+    x0, y0, x1, y1 = frame
+    sub = img[y0:y1 + 1, x0:x1 + 1]
+    med = np.median(sub, axis=0)                       # (W, 3) per-column background colour
+    # Background from the plot EDGES, not the overall median: on sheets where the band covers
+    # more than half the width (REDA D-series) the median IS the band, and the unshaded ends
+    # would be reported as the band instead.
+    e = max(3, int(0.03 * med.shape[0]))
+    edges = np.vstack([med[:e], med[-e:]])
+    cand = np.unique((np.round(edges / 8.0) * 8).astype(int), axis=0)
+    bg = max((np.median(med[np.all(np.abs((np.round(med / 8.0) * 8).astype(int) - c) <= 8, axis=1)], axis=0)
+              for c in cand),
+             key=lambda b: int(np.sum(np.linalg.norm(med - b, axis=1) <= tol)))
+    q = (np.round(med / 8.0) * 8).astype(int)          # quantise so dithering doesn't split runs
+    off = np.linalg.norm(med - bg, axis=1) > tol
+    W = med.shape[0]
+    # Group by colour, not by adjacency: a vertical grid line inside the band owns its whole
+    # column, so the band's colour is interrupted every few columns and a plain run scan
+    # returns fragments instead of one band.
+    bands, seen = [], set()
+    for i in np.flatnonzero(off):
+        key = tuple(q[i])
+        if key in seen:
+            continue
+        seen.add(key)
+        cols = np.flatnonzero(off & np.all(np.abs(q - q[i]) <= 8, axis=1))
+        lo, hi = int(cols[0]), int(cols[-1])
+        if (hi - lo + 1) < min_width * W or cols.size < 0.4 * (hi - lo + 1):
+            continue                                   # too narrow, or scattered rather than solid
+        c = np.median(med[cols], axis=0).astype(int)
+        bands.append({"x_px": [int(x0 + lo), int(x0 + hi)],
+                      "hex": "#%02x%02x%02x" % (c[2], c[1], c[0]),
+                      "width_frac": round((hi - lo + 1) / W, 3)})
+    bands.sort(key=lambda b: -b["width_frac"])
+    uniq = []                                          # merge near-identical spans
+    for b in bands:
+        if not any(abs(b["x_px"][0] - u["x_px"][0]) <= 3 and abs(b["x_px"][1] - u["x_px"][1]) <= 3
+                   for u in uniq):
+            uniq.append(b)
+    return uniq
+
+
+def detect_marker_lines(img, frame, min_frac=0.55):
+    """Vertical marker lines inside the plot (BEP / Qmin / Qmax), as pixel columns.
+
+    These are drawn in a colour of their own (often dashed) rather than in the grid's grey,
+    so a column that is strongly coloured over most of the plot height is a marker.
+    """
+    x0, y0, x1, y1 = frame
+    sub = img[y0:y1 + 1, x0:x1 + 1]
+    hsv = cv2.cvtColor(sub, cv2.COLOR_BGR2HSV)
+    strong = ((hsv[:, :, 1] > 70) & (hsv[:, :, 2] > 40)).astype(np.uint8)
+    strong = cv2.morphologyEx(strong, cv2.MORPH_CLOSE, np.ones((9, 1), np.uint8))
+    frac = strong.mean(axis=0)
+    out, i, W = [], 0, frac.size
+    while i < W:
+        if frac[i] < min_frac:
+            i += 1
+            continue
+        j = i
+        while j + 1 < W and frac[j + 1] >= min_frac:
+            j += 1
+        if (j - i + 1) <= 6:                            # a marker is a line, not a filled area
+            col = np.median(sub[:, i:j + 1].reshape(-1, 3), axis=0).astype(int)
+            out.append({"x_px": float((i + j) / 2 + x0),
+                        "hex": "#%02x%02x%02x" % (col[2], col[1], col[0])})
+        i = j + 1
+    return out
+
+
 def text_labels(img, frame, pad=4):
     """Word labels inside the frame (curve names, 'BEP', 'Operating range' ...) as boxes.
     These are pre-filled as exclude_boxes so label text in a curve's colour isn't digitized."""
@@ -258,6 +361,9 @@ def text_labels(img, frame, pad=4):
         if x0 <= (L + R) / 2 <= x1 and y0 <= (T + B) / 2 <= y1:
             out.append({"text": w, "box": [int(L - pad), int(T - pad), int(R + pad), int(B + pad)]})
     return out
+
+
+MIN_AXIS_SPAN = 0.35      # tick span as a fraction of the plot frame
 
 
 def find_axes(img, frame, lines=None):
@@ -285,6 +391,13 @@ def find_axes(img, frame, lines=None):
                 fit = _fit_axis(g, orient)
                 if not fit:
                     break
+                # a real axis' ticks span most of the plot; a spec table or a BEP text box
+                # inside the frame does not. Without this, those blocks form fake axes that
+                # sit nearer the frame than the true ones and steal the template's role.
+                span = max(t["px"] for t in fit["ticks"]) - min(t["px"] for t in fit["ticks"])
+                if span < MIN_AXIS_SPAN * (fh if orient == "v" else fw):
+                    g = [t for t in g if id(t) not in fit["_keep_ids"]]
+                    continue
                 fit.update(side=side, orient=orient)
                 if lines is not None:
                     snap_to_grid(fit, lines, frame)
@@ -379,8 +492,15 @@ def curve_colors(img, frame, k=6):
 
 
 # ----------------------------------------------------------------------------- review image
-def review_image(img, frame, axes, colors, path, labels=()):
+def review_image(img, frame, axes, colors, path, labels=(), bands=(), markers=()):
     o = img.copy()
+    x0f, y0f, x1f, y1f = frame
+    for bnd in bands:                                   # proposed operating-range band
+        cv2.rectangle(o, (bnd["x_px"][0], y0f), (bnd["x_px"][1], y1f), (255, 0, 0), 2)
+        cv2.putText(o, "ROR band", (bnd["x_px"][0] + 3, y0f + 16), cv2.FONT_HERSHEY_SIMPLEX,
+                    0.45, (255, 0, 0), 1, cv2.LINE_AA)
+    for mk in markers:
+        cv2.line(o, (int(mk["x_px"]), y0f), (int(mk["x_px"]), y1f), (255, 0, 0), 1)
     for l in labels:
         bx = l["box"]
         cv2.rectangle(o, (bx[0], bx[1]), (bx[2], bx[3]), (0, 165, 255), 1)
@@ -447,6 +567,59 @@ def apply_template(cfg, axes, tpl):
     cfg["exclude_boxes"] += tpl.get("exclude_boxes", [])
     cfg["_template"] = tpl.get("name")
     cfg["_template_missing"] = missing
+    return cfg
+
+
+def add_ror(cfg, bands, markers):
+    """Turn shaded bands / marker lines into ROR flow values using the drafted x calibration.
+
+    The widest band is proposed as meta.ror_min_bpd / ror_max_bpd (the recommended operating
+    range); any narrower band inside it (Baker Hughes prints a "Test Range" inside the
+    "Allowed Operational Range") and any marker lines are listed for Claude to choose from.
+    Values are in the x axis' own unit -- convert if that unit is not bpd.
+    """
+    ticks = cfg.get("x_axis", {}).get("ticks") or []
+    if len(ticks) < 2:
+        return cfg
+    t = np.asarray(ticks, float)
+    b, a = np.polyfit(t[:, 0], t[:, 1], 1)
+    val = lambda px: float(a + b * px)
+    cfg["_ror_candidates"] = {
+        "unit": cfg.get("x_axis", {}).get("unit", "bpd"),
+        "bands": [{"flow": [round(val(x["x_px"][0]), 1), round(val(x["x_px"][1]), 1)],
+                   "hex": x["hex"], "width_frac": x["width_frac"]} for x in bands],
+        "marker_lines_flow": [round(val(m["x_px"]), 1) for m in markers],
+    }
+    if bands:
+        unit = cfg.get("x_axis", {}).get("unit", "bpd").lower()
+        k = 6.289811 if unit in ("m3d", "m3/d") else 1.0     # the catalogue column is bpd
+        lo, hi = (round(val(bands[0]["x_px"][0]) * k, 1), round(val(bands[0]["x_px"][1]) * k, 1))
+        cfg["meta"].setdefault("ror_min_bpd", None)
+        if cfg["meta"].get("ror_min_bpd") is None:
+            cfg["meta"]["ror_min_bpd"], cfg["meta"]["ror_max_bpd"] = lo, hi
+            conv = "" if k == 1.0 else f" (converted from {unit} x{k:g})"
+            cfg["_ror_source"] = (f"shaded band {bands[0]['hex']} -> {lo:g}-{hi:g} bpd{conv} "
+                                  f"-- confirm against any ROR printed in the sheet's spec table")
+    return cfg
+
+
+def add_frequency(cfg, freq):
+    """Pre-fill base_frequency_hz / rpm from the header, and never assume 60 Hz.
+
+    Metric sheets (m3/d, m, kW) are usually 50 Hz while imperial ones are usually 60 Hz, so a
+    metric sheet filed as 60 Hz is a common and silent error. The rpm is the tiebreaker:
+    ~3500 rpm is 60 Hz, ~2917 rpm is 50 Hz.
+    """
+    cfg["_frequency_evidence"] = freq
+    hz = freq["hz_text"][0] if len(freq["hz_text"]) == 1 else None
+    rpm = freq["rpm_text"][0] if len(freq["rpm_text"]) == 1 else None
+    if rpm and cfg["meta"].get("rpm") is None:
+        cfg["meta"]["rpm"] = rpm
+    if hz and cfg["meta"].get("base_frequency_hz") is None:
+        cfg["meta"]["base_frequency_hz"] = hz
+    if hz and rpm and abs(rpm / 58.33 - hz) > 0.1 * hz:
+        cfg["_frequency_warning"] = (f"sheet says {hz} Hz but {rpm} rpm implies "
+                                     f"{rpm / 58.33:.0f} Hz -- confirm before cataloguing")
     return cfg
 
 
@@ -549,14 +722,19 @@ def run_inspect(sheet, out, page=0, dpi=200, template=None, verbose=False):
     axes = find_axes(img, frame, lines)
     colors = curve_colors(img, frame)
     labels = text_labels(img, frame)
+    bands = detect_ror_bands(img, frame)
+    markers = detect_marker_lines(img, frame)
+    freq = detect_frequency(img, frame)
     save_json({"source": str(sheet), "page": page, "scale_applied": scale, "label_height_px": h, "dpi": dpi, "size": [img.shape[1], img.shape[0]],
                "frame": frame, "axes": axes, "colors": colors, "labels": labels}, out / "inspect.json")
-    review_image(img, frame, axes, colors, out / "review.png", labels)
+    review_image(img, frame, axes, colors, out / "review.png", labels, bands, markers)
     draft = draft_config(sheet_png, frame, axes, colors)
     draft["exclude_boxes"] = [l["box"] for l in labels]
     draft["_labels"] = [l["text"] for l in labels]
     if template:
         apply_template(draft, axes, load_json(template))
+    add_ror(draft, bands, markers)
+    add_frequency(draft, freq)
     save_json(draft, out / "sheet.draft.json")
     if not verbose:
         return draft, axes
@@ -569,6 +747,8 @@ def run_inspect(sheet, out, page=0, dpi=200, template=None, verbose=False):
               + f" rejected={a['rejected']}" + (f" ALT-UNITS-OF {a['alt_of']}" if a.get('alt_of') else "")
               + (f" repaired={a['repaired']}" if a['repaired'] else ""))
     print("labels", [l["text"] for l in labels])
+    print("freq", draft.get("_frequency_evidence"), draft.get("_frequency_warning", ""))
+    print("ror", draft.get("_ror_candidates"), "->", draft.get("_ror_source", "no band found"))
     print("colors", ", ".join(f"{c['hex']}({c['kind']}, n={c['pixels']})" for c in colors))
     if template:
         print("template", draft.get("_template"), "missing roles:", draft.get("_template_missing") or "none")

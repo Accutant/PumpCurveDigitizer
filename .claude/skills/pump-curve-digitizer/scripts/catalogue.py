@@ -10,6 +10,12 @@ Usage:
   is replaced, everything else is untouched. A timestamped .bak copy is written first.
 * Sheets with status "review" are skipped unless --accept-review is given (after a human
   has looked at overlay.png / fit_plot.png).
+* Sheets with status "reject" are NEVER written: --accept-review does not override them.
+  A reject means a check no sign-off should waive failed (hydraulic error > 10 pts, power
+  negative in range, impossible efficiency, BEP outside the sheet's own ROR, printed-BEP
+  mismatch > 10%). Fix sheet.json and re-run digitize.py instead.
+* If the same pump is already in the log with a BETTER QA score, the worse re-run is skipped
+  unless --force: duplicate scans of one sheet must not silently replace a cleaner run.
 * A side log (default: digitize_log.csv next to the catalogue) records QA metrics and the
   work folder for every row written, so any coefficient can be traced back to its sheet.
 """
@@ -84,12 +90,47 @@ def log_row(res, workdir):
            "model": res["meta"].get("model"), "base_frequency_hz": res["meta"].get("base_frequency_hz"),
            "status": res["status"], "workdir": str(Path(workdir).resolve()),
            "hydraulic_check_max_diff_pts": res.get("derived", {}).get("hydraulic_check_max_diff_pts"),
+           "qa_score": round(qa_score(res), 3),
            "flags": "; ".join(res["flags"])}
     for n, v in res["curves"].items():
         q = v.get("qa", {})
         out[f"{n}_n"] = q.get("n_points")
         out[f"{n}_r2"] = q.get("r2")
         out[f"{n}_max_resid_pct_span"] = q.get("max_resid_pct_span")
+    return out
+
+
+def qa_score(res):
+    """Lower is better: worst of the hydraulic error (pts) and the per-curve max residual
+    (% of axis span). Used to decide which of two scans of the same pump to keep."""
+    worst = 0.0
+    hyd = (res.get("derived") or {}).get("hydraulic_check_max_diff_pts")
+    if hyd is not None:
+        worst = max(worst, float(hyd))
+    for v in res.get("curves", {}).values():
+        r = (v.get("qa") or {}).get("max_resid_pct_span")
+        if r is not None:
+            worst = max(worst, float(r))
+    return worst
+
+
+def previous_scores(logp):
+    """{(mfr, model, hz): best qa score seen} from the digitize log, for duplicate handling."""
+    out = {}
+    if not Path(logp).exists():
+        return out
+    with Path(logp).open(newline="") as f:
+        for row in csv.DictReader(f):
+            k = (str(row.get("manufacturer") or "").strip().lower(),
+                 str(row.get("model") or "").strip().lower(),
+                 str(row.get("base_frequency_hz") or "").strip().rstrip("0").rstrip("."))
+            try:
+                sc = max([float(row.get("hydraulic_check_max_diff_pts") or 0)]
+                         + [float(row.get(f"{c}_max_resid_pct_span") or 0)
+                            for c in ("head", "power", "eff")])
+            except ValueError:
+                continue
+            out[k] = min(out.get(k, sc), sc)
     return out
 
 
@@ -105,6 +146,8 @@ def main():
     ap.add_argument("--accept-review", action="store_true")
     ap.add_argument("--log")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--force", action="store_true",
+                    help="write even if a previous scan of the same pump scored better")
     a = ap.parse_args()
 
     cat = Path(a.catalogue)
@@ -116,11 +159,24 @@ def main():
     else:
         cols, rows = DEFAULT_COLUMNS, []
 
+    logp = Path(a.log) if a.log else cat.with_name("digitize_log.csv")
+    prev = previous_scores(logp)
+
     new_rows, logs = [], []
     for rp in a.results:
         res = load_json(rp)
         wd = Path(rp).parent
         label = f"{res['meta'].get('manufacturer')} {res['meta'].get('model')}"
+        if res.get("status") == "reject" or res.get("hard_failures"):
+            print(f"REJECT {label}: {'; '.join(res.get('hard_failures') or res['flags'])}")
+            print("       not written -- fix sheet.json and re-run digitize.py")
+            continue
+        k = key({"manufacturer": res["meta"].get("manufacturer"), "model": res["meta"].get("model"),
+                 "base_frequency_hz": res["meta"].get("base_frequency_hz")})
+        sc, old = qa_score(res), prev.get(k)
+        if old is not None and sc > old + 0.5 and not a.force:
+            print(f"SKIP  {label}: an earlier scan scored better (QA {old:.1f} vs {sc:.1f}); --force to overwrite")
+            continue
         if res["status"] != "ok" and not a.accept_review:
             print(f"SKIP  {label}: status={res['status']} ({'; '.join(res['flags'])})")
             continue
@@ -149,7 +205,6 @@ def main():
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()
         w.writerows(rows)
-    logp = Path(a.log) if a.log else cat.with_name("digitize_log.csv")
     exists = logp.exists()
     fields = sorted({k for l in logs for k in l}, key=lambda k: (k not in ("date", "manufacturer", "model"), k))
     if exists:

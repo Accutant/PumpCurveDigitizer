@@ -1,0 +1,12 @@
+# conda env create -f environment.yml   ->  env "pumpdig" with everything, incl. the Tesseract binary
+name: pumpdig
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - opencv
+  - pymupdf
+  - pytesseract
+  - matplotlib
+  - tesseract
